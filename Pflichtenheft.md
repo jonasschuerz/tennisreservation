@@ -83,4 +83,4 @@ Die Platzreservierung muss fehlerfrei funktionieren.
 ## 10 Literaturverzeichnis
 ## 11 Abbildungsverzeichnis
 - Abb. 1: Klassendiagramm.png
-- Abb. 2: USE_Case_Diagram.png
+- Abb. 2: UseCaseDiagram.png
