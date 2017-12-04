@@ -54,7 +54,7 @@ Realisiert wird diese Webanwendung in HTML5, CSS, JavaScript und PHP. HTML5 wird
 #### 2.1.3 Modell des Problembereichs
 ![CLD Diagram](./images/Klassendiagramm.jpg)
 
-#### 2.1.4 Beschreibung der GeschäGeschäftsprozesse
+#### 2.1.4 Beschreibung der Geschäftsprozesse
 Name des Geschäftsprozesses | Auslösendes Ereignis | Ergebnis | Mitwirkende
 ------------------ | ---------------|----------|-----------------
 Platz reservieren | Ein Spieler will einen Platz reservieren | Spieler hat sich einen Platz reserviert| Spieler
