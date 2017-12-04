@@ -6,5 +6,5 @@ von: Lukas Feck-Melzer Lukas Erhart, Mario Lengauer, Jonas Schürz
 Dieses Projekt wird im Rahmen des Gegenstandes "SYP" durchgeführt. Es soll die Reservierung von Plätzen in Tennisvereinen vereinfachen.
 
 ## Ziel <br> 
-Dies wird eine Webanwendung, welche zum Reservieren der Tennisplätze verwendet werden kann. <Br>
+Eine Webanwendung, die zum Reservieren von Tennisplätzen verwendet wird. <Br>
 
