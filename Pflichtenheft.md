@@ -51,7 +51,6 @@ Die Webapplikation soll in Tennisvereinen zur Reservierung eingesetzt werden.
 Realisiert wird diese Webanwendung in HTML5, CSS, JavaScript und PHP. HTML5 wird für das Grundgerüst der Website verwendet, CSS ist für die grafische Gestaltung zuständig und JavaScript wird benötigt um Interaktionen auf der Website durchzuführen. Um auf Datenbanken zuzugreifen, benötigen wir PHP.
 
 #### 2.1.2 Glossar
-<Fachbegriff> <Erläuterung mit maximal 3 kurzen Sätzen.>
 #### 2.1.3 Modell des Problembereichs
 ![CLD Diagram](./images/Klassendiagramm.jpg)
 
