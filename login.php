@@ -19,7 +19,7 @@ if(isset($_GET['login'])) {
 }
 ?>
 <!DOCTYPE html>
-<html style="height: 100%; background-color: #101f26;">
+<html style="height: 100%; background-color: #606060;">
 <head>
   <meta charset="utf-8">
   <title>Login</title>
@@ -34,39 +34,38 @@ if(isset($errorMessage)) {
 }
 ?>
 <div class="section" style="padding-top: 15%;">
-  <div class="container" style="width: 100%; max-width: 400px;">
-    <div class="field" style="padding-bottom: 5%; width:100%;">
-      <figure class="image is-128x128" style="margin: auto;">
-        <img class="img" style="text-align: center;" src="img/loginpic.png"/>
-      </figure>
+    <div class="container" style="width: 100%; max-width: 400px; padding: 25px; border-radius: 25px; background-color: #C0C0C0;">
+      <div class="field" style="padding-bottom: 5%; width:100%;">
+        <figure class="image is-128x128" style="margin: auto;">
+          <img class="img" style="text-align: center;" src="img/loginpic.png"/>
+        </figure>
+      </div>
+      <form action="?login=1" method="post">
+        <div class="block">
+          <p class="control has-icons-left has-icons-right">
+            <input class="input" type="email" maxlength="250" placeholder="Email" name="email">
+            <span class="icon is-small is-left">
+              <i class="fa fa-envelope"></i>
+            </span>
+          </p>
+        </div>
+        <div class="block">
+          <p class="control has-icons-left">
+            <input class="input" type="password" maxlength="250" placeholder="Password" name="passwort">
+            <span class="icon is-small is-left">
+              <i class="fa fa-lock"></i>
+            </span>
+          </p>
+        </div>
+        <div class="block">
+          <p class="control">
+            <button class="button is-success" type="submit">
+              Login
+            </button>
+          </P>
+        </div>
+      </form>
     </div>
-    <form action="?login=1" method="post">
-      <div class="block">
-        <p class="control has-icons-left has-icons-right">
-          <input class="input" type="email" maxlength="250" placeholder="Email" name="email">
-          <span class="icon is-small is-left">
-            <i class="fa fa-envelope"></i>
-          </span>
-        </p>
-      </div>
-      <div class="block">
-        <p class="control has-icons-left">
-          <input class="input" type="password" maxlength="250" placeholder="Password" name="passwort">
-          <span class="icon is-small is-left">
-            <i class="fa fa-lock"></i>
-          </span>
-        </p>
-      </div>
-      <div class="block">
-        <p class="control">
-          <button class="button is-success" type="submit">
-            Login
-          </button>
-        </P>
-      </div>
-    </form>
-  </div>
-
 </div>
 </body>
 </html>
