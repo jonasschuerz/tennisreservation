@@ -11,7 +11,7 @@ if(isset($_GET['login'])) {
 
   if ($user !== false && password_verify($passwort, $user['passwort'])) {
     $_SESSION['userid'] = $user['id'];
-    header("Location: ./isLogedIn.php");
+    header("Location: ./Home.php");
     die();
   } else {
     $errorMessage = "E-Mail oder Passwort war ungültig<br>";
@@ -19,7 +19,7 @@ if(isset($_GET['login'])) {
 }
 ?>
 <!DOCTYPE html>
-<html style="height: 100%; background-color: #606060;">
+<html style="height: 100%; background-color: hsl(0, 0%, 21%);">
 <head>
   <meta charset="utf-8">
   <title>Login</title>
