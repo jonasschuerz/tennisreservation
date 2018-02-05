@@ -17,6 +17,7 @@ Jonas Schürz
 |-------|-------------|--------------|-------------|
 |  0.1  | Alle| Erstellung| Mario Lengauer|
 |  0.2  | Alle | Überarbeitung | Lukas Feck-Melzer
+|  0.3  | Alle | Überarbeitung | Lukas Feck-Melzer
 
 
 ## Inhalt
