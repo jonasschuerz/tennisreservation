@@ -24,37 +24,37 @@ Jonas Schürz
 - 2 Ausgangssituation und Zielsetzung...
    - 2.1 Ausgangssituation...
       - 2.1.1 Beschreibung des Problembereiches...
-      - 2.1.2 Glossar...
-      - 2.1.3 Modell des Problembereichs...
-      - 2.1.4 Beschreibung der Geschäftsprozesse...
+      - 2.1.2 Aufgabenstellung
+      - 2.1.3 Glossar...
+      - 2.1.4 Modell des Problembereichs...
+      - 2.1.5 Beschreibung der Geschäftsprozesse...
    - 2.2 Zielbestimmung...
 - 3 Funktionale Anforderungen...
    - 3.1 Use Case Diagramme...
 - 4 Nicht-funktionale Anforderungen...
 - 5 Mengengerüst...
-- 6 Risikoakzeptanz...
-- 7 Lieferumfang...
-- 8 Abnahmekriterien...
-- 9 Abkürzungsverzeichnis...
-- 10 Literaturverzeichnis...
-- 11 Abbildungsverzeichnis...
+- 6 Lieferumfang...
+- 7 Abnahmekriterien...
+- 8 Abkürzungsverzeichnis...
+- 9 Literaturverzeichnis...
+- 10 Abbildungsverzeichnis...
 
 ## 1 Motivation
 Dieses Projekt wird im Rahmen des Gegenstandes "SYP" durchgeführt. Es soll die Reservierung von Plätzen in Tennisvereinen vereinfachen.
 
 ## 2 Ausgangssituation und Zielsetzung
 ### 2.1 Ausgangssituation
-Zurzeit muss der Kunde zum Verein fahren und sein Schloss auf einem Reservierungsssteckbrett anbringen, um festzulegen wann und wo er/sie spielen möchte. Dies ist sehr umständlich.
+Die Tennisplatzreservierung wird durch ein Steckbrett am Tennisplatz geregelt. Das Mitglied muss zum Reservieren zu dem jeweiligen Tennisplatz fahren.
 
-##### 2.1.1 Beschreibung des Problembereichs
-Die Webapplikation soll in Tennisvereinen zur Reservierung eingesetzt werden.
-Realisiert wird diese Webanwendung in HTML5, CSS, JavaScript und PHP. HTML5 wird für das Grundgerüst der Website verwendet, CSS ist für die grafische Gestaltung zuständig und JavaScript wird benötigt um Interaktionen auf der Website durchzuführen. Um auf Datenbanken zuzugreifen, benötigen wir PHP.
-
-#### 2.1.2 Glossar
-#### 2.1.3 Modell des Problembereichs
+#### 2.1.1 Beschreibung des Problembereichs
+Die derzeitige Reservierung durch Steckbretter ist Zeitintensiv und unsicher.
+#### 2.1.2 Aufgabenstellung
+Die Reservierung durch Steckbretter soll durch eine Webapplikation ersetzt werden.
+#### 2.1.3 Glossar
+#### 2.1.4 Modell des Problembereichs
 ![CLD Diagram](./images/Klassendiagramm.jpg)
 
-#### 2.1.4 Beschreibung der Geschäftsprozesse
+#### 2.1.5 Beschreibung der Geschäftsprozesse
 Name des Geschäftsprozesses | Auslösendes Ereignis | Ergebnis | Mitwirkende
 ------------------ | ---------------|----------|-----------------
 Platz reservieren | Ein Spieler will einen Platz reservieren | Spieler hat sich einen Platz reserviert| Spieler
@@ -63,24 +63,27 @@ Plätze verwalten | Der Tennisverein bekommt einen neuen Platz | Man kann nun de
 Spieler verwalten | Ein neuer Spieler möchte dem Verein beitreten | Spieler kann sich nun einloggen und reservieren | Admin
 ### 2.2 Zielbestimmung
 Diese Webanwendung wird zum Reservieren der Tennisplätze verwendet werden. <Br>
-Die Zielgruppe wird von jungen Leuten bis zu älteren Leuten reichen. Deswegen setzen wirleichte Computerkenntnisse vorraus.
+Die Zielgruppe wird von jungen Leuten bis zu älteren Leuten reichen. Deswegen setzen wir leichte Computerkenntnisse voraus.
+
 ## 3 Funktionale Anforderungen
-Das Projekt soll die Tennisplatzreservierung vereinfachen.
+Das Projekt muss die Tennisplatzreservierung vereinfachen.
+
 ### 3.1 Use Case Diagramme
 ![UC Diagram](./images/USE_Case_Diagram.jpg)
+
 ## 4 Nicht-funktionale Anforderungen
 Die Webapplikiation soll sowohl von jungen als auch von älteren Menschen bedient werden, weshalb sie intuitiv und leicht zu verstehen sein muss. Außerdem muss die Software leicht wartbar sein.
+
 ## 5 Mengengerüst
 Am Anfang werden es 5 Tennisvereine sein. Diese Zahl wird im Laufe der Zeit steigen.<Br>
-Wir schätzen mit täglich 10 Reservierungen pro Tennisverein. <Br>
+Wir schätzen mit täglich 10 Reservierungen pro Tennisverein. (Im Sommer)<Br>
 
-## 6 Risikoakzeptanz
-## 7 Lieferumfang
+## 6 Lieferumfang
 Es wird nur einen Zugang für einen Admin geben, welcher die User erstellen/ verwalten kann und die Anzahl der Plätze konfigurieren kann.
-## 8 Abnahmekriterien
+## 7 Abnahmekriterien
 Die Platzreservierung muss fehlerfrei funktionieren.
-## 9 Abkürzungsverzeichnis
-## 10 Literaturverzeichnis
-## 11 Abbildungsverzeichnis
+## 8 Abkürzungsverzeichnis
+## 9 Literaturverzeichnis
+## 10 Abbildungsverzeichnis
 - Abb. 1: Klassendiagramm.png
 - Abb. 2: UseCaseDiagram.png
