@@ -74,8 +74,8 @@ Die Webapplikiation soll sowohl von jungen als auch von älteren Menschen bedien
 Am Anfang werden es 5 Tennisvereine sein. Diese Zahl wird im Laufe der Zeit steigen.<Br>
 Wir schätzen mit täglich 10 Reservierungen pro Tennisverein. <Br>
    
-## 3.Aufgabenstellung
-Die Aufgabe des Projektteams ist es, eine Website zu erstellen, dass das Reservieren von Tennisplätzen beinhaltet.
+## 3 Aufgabenstellung
+Die Aufgabe des Projektteams ist es, eine Website zu erstellen, die das Reservieren von Tennisplätzen beinhaltet.
 ## 6 Risikoakzeptanz
 ## 7 Lieferumfang
 Es wird nur einen Zugang für einen Admin geben, welcher die User erstellen/ verwalten kann und die Anzahl der Plätze konfigurieren kann.
