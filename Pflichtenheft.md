@@ -44,11 +44,11 @@ Dieses Projekt wird im Rahmen des Gegenstandes "SYP" durchgeführt. Es soll die 
 
 ## 2 Ausgangssituation und Zielsetzung
 ### 2.1 Ausgangssituation
-Zurzeit muss der Kunde zum Verein fahren und sein Schloss auf einem Reservierungsssteckbrett anbringen, um festzulegen wann und wo er/sie spielen möchte. Dies ist sehr umständlich.
+Ein Tennisverein hat ein Reservierungssteckbrett wo Mitglieder festlegen können, wann diese spielen möchten. 
 
 ##### 2.1.1 Beschreibung des Problembereichs
-Die Webapplikation soll in Tennisvereinen zur Reservierung eingesetzt werden.
-Realisiert wird diese Webanwendung in HTML5, CSS, JavaScript und PHP. HTML5 wird für das Grundgerüst der Website verwendet, CSS ist für die grafische Gestaltung zuständig und JavaScript wird benötigt um Interaktionen auf der Website durchzuführen. Um auf Datenbanken zuzugreifen, benötigen wir PHP.
+Das Problem dabei ist, dass das Mitglied persöhnlich hinfahren muss um 
+festlegen zu können wann dieser spielen möchte. 
 
 #### 2.1.2 Glossar
 #### 2.1.3 Modell des Problembereichs
@@ -73,7 +73,9 @@ Die Webapplikiation soll sowohl von jungen als auch von älteren Menschen bedien
 ## 5 Mengengerüst
 Am Anfang werden es 5 Tennisvereine sein. Diese Zahl wird im Laufe der Zeit steigen.<Br>
 Wir schätzen mit täglich 10 Reservierungen pro Tennisverein. <Br>
-
+   
+## 3.Aufgabenstellung
+Die Aufgabe des Projektteams ist es, eine Website zu erstellen, dass das Reservieren von Tennisplätzen beinhaltet.
 ## 6 Risikoakzeptanz
 ## 7 Lieferumfang
 Es wird nur einen Zugang für einen Admin geben, welcher die User erstellen/ verwalten kann und die Anzahl der Plätze konfigurieren kann.
