@@ -8,4 +8,4 @@ Dieses Projekt wird im Rahmen des Gegenstandes "SYP" durchgeführt. Es soll die 
 ## Ziel <br> 
 Eine Webanwendung, die zum Reservieren von Tennisplätzen verwendet wird. <Br>
 
-To see the whole definition see: [Pflichtenheft](Pflichtenheft.md)
+Siehe: [Pflichtenheft](Pflichtenheft.md)
