@@ -1,6 +1,6 @@
 <?php
-session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=syp', 'root', '');
+require('Database.php');
+require ('AccountSession');
 
 if (isset($_GET['login'])) {
     $email = $_POST['email'];
@@ -11,7 +11,7 @@ if (isset($_GET['login'])) {
 
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
         $_SESSION['userid'] = $user['id'];
-        header("Location: ./reservation.php");
+        header("Location: index.php");
         die();
     } else {
         $errorMessage = "E-Mail oder Passwort war ungültig<br>";
@@ -26,6 +26,7 @@ if (isset($_GET['login'])) {
     <link rel="stylesheet" href="./bulma/css/bulma.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
 <?php
@@ -33,7 +34,7 @@ if (isset($errorMessage)) {
     echo $errorMessage;
 }
 ?>
-<div class="section" >
+<div class="section">
     <div class="container"
          style="width: 100%; max-width: 400px; padding: 25px; border-radius: 25px; background-color: #4d4d4d;">
         <div class="field" style="padding-bottom: 5%; width:100%;">
@@ -61,6 +62,8 @@ if (isset($errorMessage)) {
             <div class="block">
                 <p class="control">
                     <button class="button is-success" type="submit">
+                        <i class="fas fa-sign-in-alt"></i>
+                        &nbsp;
                         Login
                     </button>
                 </P>

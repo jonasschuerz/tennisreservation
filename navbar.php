@@ -13,19 +13,26 @@
 
     <div id="navMenuColordark" class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item" href="home.php">
-                Home
+            <a class="navbar-item" href="index.php">
+                <i class="fas fa-home"></i>
+                &nbsp Home
             </a>
             <a class="navbar-item" href="reservation.php">
-                Reservierung
+                <i class="far fa-calendar-alt"></i>
+                &nbsp Reservierung
+            </a>
+            <a class="navbar-item" href="context.php">
+                <i class="fas fa-address-book"></i>
+                &nbsp  Kontakt
             </a>
         </div>
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="field is-grouped">
                     <p class="control">
-                        <a class="button" style="background-color: #6666ff; color: white;" href="logout.php">
-                            <span>Abmelden</span>
+                        <a class="button" style="background-color: #58ACFA; color: white;" href="logout.php">
+                            <span>Abmelden&nbsp&nbsp</span>
+                            <i class="fas fa-sign-out-alt"></i>
                         </a>
                     </p>
                 </div>
