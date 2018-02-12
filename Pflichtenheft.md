@@ -84,7 +84,7 @@ Am Anfang werden es 5 Tennisvereine sein. Diese Zahl wird im Laufe der Zeit stei
 Wir schätzen mit täglich 10 Reservierungen pro Tennisverein. (Im Sommer)<Br>
 
 ## 6 Lieferumfang
-Es wird nur einen Zugang für einen Admin geben, welcher die User erstellen/ verwalten kann und die Anzahl der Plätze konfigurieren kann.
+Das fertige Projekt, welches beim Kunden ankommt, beinhaltet genau einen Aktivierungscode, der vom jeweiligen Vereinsadministrator eingelöst wird um Spieler/Mitglieder zum jeweiligen Verein hinzuzufügen und die Tennisplätze an sich festzulegen und zu konfigurieren.
 
 ## 7 Abnahmekriterien
 Die Platzreservierung muss fehlerfrei funktionieren.
