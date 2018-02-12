@@ -36,22 +36,24 @@ Jonas Schürz
 - 5 Mengengerüst...
 - 6 Lieferumfang...
 - 7 Abnahmekriterien...
-- 8 Abkürzungsverzeichnis...
-- 9 Literaturverzeichnis...
-- 10 Abbildungsverzeichnis...
+- 8 Abbildungsverzeichnis...
 
 ## 1 Motivation
 Dieses Projekt wird im Rahmen des Gegenstandes "SYP" durchgeführt. Es soll die Reservierung von Plätzen in Tennisvereinen vereinfachen.
 
 ## 2 Ausgangssituation und Zielsetzung
+
 ### 2.1 Ausgangssituation
 Die Tennisplatzreservierung wird durch ein Steckbrett am Tennisplatz geregelt. Das Mitglied muss zum Reservieren zu dem jeweiligen Tennisplatz fahren.
 
 #### 2.1.1 Beschreibung des Problembereichs
-Die derzeitige Reservierung durch Steckbretter ist Zeitintensiv und unsicher.
+**Die derzeitige Reservierung durch Steckbretter ist**, aufgrund dessen dass im Voraus zum Tennisplatz gefahren werden muss um zu reservieren, **zeitintensiv und unsicher**, da nicht sichergestellt wird, dass die vorgenommene Reservierung nicht von Anderen verändert wird.
+
 #### 2.1.2 Aufgabenstellung
 Die Reservierung durch Steckbretter soll durch eine Webapplikation ersetzt werden.
+
 #### 2.1.3 Glossar
+
 #### 2.1.4 Modell des Problembereichs
 ![CLD Diagram](./images/Klassendiagramm.jpg)
 
@@ -62,18 +64,19 @@ Platz reservieren | Ein Spieler will einen Platz reservieren | Spieler hat sich 
 Reservierung löschen| Ein Spieler will einen reservierten Platz wieder löschen | Der reservierte Platz ist nun wieder frei | Spieler
 Plätze verwalten | Der Tennisverein bekommt einen neuen Platz | Man kann nun den Platz reservieren | Admin
 Spieler verwalten | Ein neuer Spieler möchte dem Verein beitreten | Spieler kann sich nun einloggen und reservieren | Admin
+
 ### 2.2 Zielbestimmung
 Diese Webanwendung wird zum Reservieren der Tennisplätze verwendet werden. <Br>
 Die Zielgruppe wird von jungen Leuten bis zu älteren Leuten reichen. Deswegen setzen wir leichte Computerkenntnisse voraus.
 
 ## 3 Funktionale Anforderungen
-Das Projekt muss die Tennisplatzreservierung vereinfachen.
+Spieler/Vereinsmitglieder müssen Plätze reservieren und Reservierungen aufheben können. Der Vereinsadministrator muss Spieler/Mitglieder zu einem Verein hinzufügen und Plätze verwalten können.
 
 ### 3.1 Use Case Diagramme
 ![UC Diagram](./images/USE_Case_Diagram.jpg)
 
 ## 4 Nicht-funktionale Anforderungen
-Die Webapplikiation soll sowohl von jungen als auch von älteren Menschen bedient werden, weshalb sie intuitiv und leicht zu verstehen sein muss. Außerdem muss die Software leicht wartbar sein.
+Die Webapplikiation wird sowohl von jungen als auch von älteren Menschen bedient, weshalb sie intuitiv und leicht zu verstehen sein muss. Die Zeitersparnis und Sicherheit beim Reservieren muss maximiert werden. Die Anwendung muss performant und ohne Fehler funktionieren.
 
 ## 5 Mengengerüst
 Am Anfang werden es 5 Tennisvereine sein. Diese Zahl wird im Laufe der Zeit steigen.<Br>
@@ -81,10 +84,10 @@ Wir schätzen mit täglich 10 Reservierungen pro Tennisverein. (Im Sommer)<Br>
 
 ## 6 Lieferumfang
 Es wird nur einen Zugang für einen Admin geben, welcher die User erstellen/ verwalten kann und die Anzahl der Plätze konfigurieren kann.
+
 ## 7 Abnahmekriterien
 Die Platzreservierung muss fehlerfrei funktionieren.
-## 8 Abkürzungsverzeichnis
-## 9 Literaturverzeichnis
-## 10 Abbildungsverzeichnis
+
+## 8 Abbildungsverzeichnis
 - Abb. 1: Klassendiagramm.png
 - Abb. 2: UseCaseDiagram.png
