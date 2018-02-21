@@ -44,7 +44,7 @@ include("navbar.php");
         <div class="columns is-variable" style="margin: 0 0 20px 0; background-color: grey; ">
             <!-- Place and Date Selection-->
             <div class="column is-2"> <!--Date-->
-                <input type="text" id="text-calendar" class="input calendar" placeholder="Datum"/>
+                <input type="text" id="date" class="input calendar" placeholder="Datum"/>
                 <script>$(function () {
                         $('input.calendar').pignoseCalendar({
                             lang: 'de',
@@ -55,7 +55,7 @@ include("navbar.php");
             </div>
             <div class="column is-2 input-group clockpicker" data-placement="left" data-align="top"
                  data-autoclose="true">
-                <input type="text" class="input form-control" placeholder="Von-Uhrzeit">
+                <input id="fromTime" type="text" class="input form-control" placeholder="Von-Uhrzeit">
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-time"></span>
                 </span>
@@ -67,7 +67,7 @@ include("navbar.php");
             </script>
             <div class="column is-2 input-group clockpicker" data-placement="left" data-align="top"
                  data-autoclose="true">
-                <input type="text" class="input form-control" placeholder="Bis-Uhrzeit">
+                <input id="toTime" type="text" class="input form-control" placeholder="Bis-Uhrzeit">
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-time"></span>
                 </span>
@@ -77,27 +77,19 @@ include("navbar.php");
                     placement: 'bottom'
                 });
             </script>
-            <div class="column is-1"> <!--Places-->
-                <div class="dropdown is-hoverable">
-                    <div class="dropdown-trigger">
-                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-                            <span>Platz</span>
-                            <span class="icon is-small">
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                        <div class="dropdown-content">
-                            <p class="dropdown-item"> Platz 1 </p>
-                            <p class="dropdown-item"> Platz 2 </p>
-                        </div>
-                    </div>
 
+            <div class="column is-1"> <!--Places-->
+                <div class="control">
+                   <div class="select">
+                        <select name="place">
+                            <option class="dropdown-item"> Platz 1 </option>
+                            <option class="dropdown-item"> Platz 2 </option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="column is-2">
-                <button class="button is-primary"><i class="fas fa-plus"></i>&nbsp Platz reservieren</button>
+                <button id="addReservation" class="button is-primary"><i class="fas fa-plus"></i>&nbsp Platz reservieren</button>
             </div>
         </div>
     </div>
@@ -166,8 +158,8 @@ include("navbar.php");
                 </tbody>
             </table>
         </div>
-        <div class="" style="background: grey; padding:  0.75em 0.75em 0.75em 0.75em"> <!--Buttons-->
-            <a class="button is-danger " style=""><i class="fas fa-trash-alt"></i> &nbsp Auswahl Löschen</a>
+        <div class="" style="background: grey; padding:  0.75em 0.75em 0.75em 0.75em"> <!--Button-->
+            <button id="deleteRegistration" class="button is-danger " style=""><i class="fas fa-trash-alt"></i> &nbsp Auswahl Löschen</button>
         </div>
     </div>
 </div>

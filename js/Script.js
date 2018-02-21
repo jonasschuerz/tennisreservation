@@ -1,3 +1,4 @@
+//navbar
 document.addEventListener('DOMContentLoaded', function () {
     // Get all "navbar-burger" elements
     var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+//Communication with the backend
 $(function () {
     var $email = $('#email');
     var $password = $('#password');
@@ -31,11 +33,47 @@ $(function () {
             url: "handlelogin.php",
             data: user,
             success: function (value) {
-                console.log(value);
                 if(value.localeCompare("false") === 0){
                     $.growl.error({ message: "Email oder Passwort ist ungültig!", size: "large" });
                 }
                 else window.location = "index.php";
+            }
+        })
+    })
+    $('#addReservation').on('click', function () {
+        var registration = {
+            fromDate: $('#Date').val(),
+            fromTime: $('#fromTime').val(),
+            toTime: $('#toTime').val(),
+            place: $('#place'),
+        }
+        $.ajax({
+            type: "Post",
+            url: "addReservation.php",
+            data: registration,
+            success: function (value) {
+                console.log(value);
+                if(value.localeCompare("false") === 0){
+                    $.growl.error({message: "Reservierung fehlgeschlagen", size: "large" });
+                }
+                else $.growl.notice({title: "Success", message: "Erfolgreich reserviert", size: "large" });;
+            }
+        })
+    })
+    $('#deleteRegistration').on('click', function () {
+        var registrations = {
+
+        }
+        $.ajax({
+            type: "Post",
+            url: "delReservation.php",
+            data: registrations,
+            success: function (value) {
+                console.log(value);
+                if(value.localeCompare("false") === 0){
+                    $.growl.error({message: "Löschvorgang fehlgeschlagen", size: "large" });
+                }
+                else $.growl.notice({title: "Success", message: "Erfolgreich gelöscht", size: "large" });;
             }
         })
     })
