@@ -12,7 +12,6 @@
     <script src="particles/particles.js"></script>
 </head>
 <body>
-<script src="particles.js"></script>
 <div class="modal is-active">
     <div class="modal-background"></div>
     <div class="modal-card">
