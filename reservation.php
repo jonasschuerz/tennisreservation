@@ -78,7 +78,7 @@ include("navbar.php");
                 });
             </script>
 
-            <div class="column is-1"> <!--Places-->
+            <div class="column is-size-7"> <!--Places-->
                 <div class="control">
                    <div class="select">
                         <select name="place">

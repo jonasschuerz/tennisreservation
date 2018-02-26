@@ -10,6 +10,7 @@
     $pwd = md5(mysqli_real_escape_string($db->get_connection(), $pwd));
     $res = $db->query("Select email, password FROM users WHERE email = '$email' and password = '$pwd'");
     if($res->num_rows == 1){
+        AccountSession::login($email, uniqid());
         echo "true";
         die();
     }
