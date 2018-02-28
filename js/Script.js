@@ -17,7 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
+//refresh my reseration
+$(document).ready(function() {
+    $("#reservations").load("refreshReservation.php");
+    var refresh = setInterval(function() {
+        $("#reservations").load("refreshReservation.php");
+    }, 100);
+});
 //Communication with the backend
 $(function () {
     var $email = $('#email');

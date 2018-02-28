@@ -1,7 +1,7 @@
 <nav class="navbar is-dark">
     <div class="navbar-brand">
-        <a class="navbar-item" href="home.php">
-            <img src="LOGO.png" alt="Logo" width="112" height="28">
+        <a class="navbar-item" href="index.php">
+            <img alt="Logo" width="112" height="28">
         </a>
         <button class="navbar-burger burger" data-target="navMenuColordark"
                 style="background-color: hsla(210, 100%, 50%, 0.0); border: none;">

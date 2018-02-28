@@ -9,7 +9,7 @@
 
     <!-- JQuery -->
     <script src="js/jquery-3.3.1.js"></script>
-    <script src="/js/moment.js"></script>
+    <script src="js/moment.js"></script>
     <!-- Particle/ Animation -->
     <link rel="stylesheet" href="animate.css">
     <script src="particles/particles.js"></script>
