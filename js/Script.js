@@ -42,7 +42,7 @@ $(function () {
     })
     $('#addReservation').on('click', function () {
         var registration = {
-            fromDate: $('#Date').val(),
+            date: $('#Date').val(),
             fromTime: $('#fromTime').val(),
             toTime: $('#toTime').val(),
             place: $('#place'),
@@ -61,9 +61,7 @@ $(function () {
         })
     })
     $('#deleteRegistration').on('click', function () {
-        var registrations = {
-
-        }
+        var registrations = {}
         $.ajax({
             type: "Post",
             url: "delReservation.php",
@@ -74,6 +72,21 @@ $(function () {
                     $.growl.error({message: "Löschvorgang fehlgeschlagen", size: "large" });
                 }
                 else $.growl.notice({title: "Success", message: "Erfolgreich gelöscht", size: "large" });;
+            }
+        })
+    })
+    $('#logout').on('click', function () {
+        $.ajax({
+            type: "Post",
+            url: "handlelogout.php",
+            success: function (value) {
+                console.log(value);
+                if(value.localeCompare("false") === 0){
+                    $.growl.error({message: "Logout fehlgeschlagen", size: "large" });
+                }
+                else {
+                    window.location = "login.php";
+                }
             }
         })
     })

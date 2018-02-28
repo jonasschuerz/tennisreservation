@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+<?php require("islogedin.php"); ?>
 <html style="height: 100%;">
 <head>
     <meta charset="utf-8">
@@ -26,11 +28,11 @@
     <script src="js/Script.js"></script>
 </head>
 <body>
-<?php /*
+<?php
 if (isset($errorMessage)) {
     echo $errorMessage;
     die();
-}*/
+}
 include("navbar.php");
 ?>
 <div id="particles-js" style="position: absolute; width: 100%; height: 100%;"></div>
@@ -41,7 +43,7 @@ include("navbar.php");
         </ul>
     </div>
     <div class="animated zoomIn" style="padding: 0.05em 2% 0.2% 2%;"> <!-- Content -->
-        <div class="columns is-variable" style="margin: 0 0 20px 0; background-color: grey; ">
+        <div class="columns" style="margin: 0 0 20px 0; background-color: grey; ">
             <!-- Place and Date Selection-->
             <div class="column is-2"> <!--Date-->
                 <input type="text" id="date" class="input calendar" placeholder="Datum"/>
@@ -78,17 +80,17 @@ include("navbar.php");
                 });
             </script>
 
-            <div class="column is-size-7"> <!--Places-->
-                <div class="control">
+            <div class="column"> <!--Places-->
+
                    <div class="select">
                         <select name="place">
                             <option class="dropdown-item"> Platz 1 </option>
                             <option class="dropdown-item"> Platz 2 </option>
                         </select>
                     </div>
-                </div>
+
             </div>
-            <div class="column is-2">
+            <div class="column is-5 ">
                 <button id="addReservation" class="button is-primary"><i class="fas fa-plus"></i>&nbsp Platz reservieren</button>
             </div>
         </div>

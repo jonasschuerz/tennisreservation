@@ -1,6 +1,6 @@
 <?php
 require('Back-End/AccountSession.php');
-if (AccountSession::is_logged_in())) {
+if (!AccountSession::is_logged_in()) {
     $errorMessage = '<div class="modal is-active">
   <div class="modal-background"></div>
   <div class="modal-card">

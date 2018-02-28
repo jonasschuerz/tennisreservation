@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php require("islogedin.php"); ?>
 <html style="height: 100%;">
 <head>
     <meta charset="utf-8">
@@ -18,11 +19,10 @@
 </head>
 <body>
 <?php
-/*
 if (isset($errorMessage)) {
     echo $errorMessage;
     die();
-}*/
+}
 include("navbar.php");
 ?>
 <div id="particles-js" style="position: absolute; width: 100%; height: 100%;"></div>
