@@ -114,7 +114,6 @@ include("navbar.php");
                     <th> Von</th>
                     <th> Bis</th>
                     <th> Platz</th>
-                    <th> Status</th>
                 </tr>
                 </thead>
                 <tbody id="reservations">
@@ -133,7 +132,6 @@ include("navbar.php");
                     <td> von</td>
                     <td> bis</td>
                     <td> PlatzNR</td>
-                    <td> Status</td>
                 </tr>
                 <tr>
                     <td>
@@ -150,7 +148,6 @@ include("navbar.php");
                     <td> Von</td>
                     <td> Bis</td>
                     <td> 2PlatzNR</td>
-                    <td> 2Status</td>
                 </tr>
                 </tbody>
             </table>

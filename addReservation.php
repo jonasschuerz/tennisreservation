@@ -25,6 +25,6 @@
         echo "false existent";
         die();
     }
-   // $db->query("INSERT INTO reservations VALUES (0, '".$place."',STR_TO_DATE('".$fromDate."', '".$format."'), STR_TO_DATE('".$toDate."', '".$format."'))");
+    $db->query("INSERT INTO reservations VALUES (0, '".$place."',STR_TO_DATE('".$fromDate."', '".$format."'), STR_TO_DATE('".$toDate."', '".$format."'))");
     echo "true";
 

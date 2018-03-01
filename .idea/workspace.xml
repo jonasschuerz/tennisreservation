@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09a5106c-a198-489a-92ad-29303cc65c25" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/refreshReservation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addReservation.php" afterPath="$PROJECT_DIR$/addReservation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Script.js" afterPath="$PROJECT_DIR$/js/Script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/refreshReservation.php" afterPath="$PROJECT_DIR$/refreshReservation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reservation.php" afterPath="$PROJECT_DIR$/reservation.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,15 +16,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="addReservation.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addReservation.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addReservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="459">
+              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
               <folding>
-                <marker date="1519924239155" expanded="true" signature="707:950" ph="SELECT * FRO... reservations" />
-                <marker date="1519924239155" expanded="true" signature="707:951" ph="SELECT * FRO... reservations" />
-                <marker date="1519924239155" expanded="true" signature="1090:1226" ph="INSERT INTO reservations... " />
+                <marker date="1519931937769" expanded="true" signature="707:950" ph="SELECT * FRO... reservations" />
+                <marker date="1519931937769" expanded="true" signature="707:951" ph="SELECT * FRO... reservations" />
+                <marker date="1519931937769" expanded="true" signature="1088:1224" ph="INSERT INTO reservations... " />
               </folding>
             </state>
           </provider>
@@ -43,23 +43,28 @@
       <file leaf-file-name="Script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="3" lean-forward="false" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+            <state relative-caret-position="221">
+              <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="refreshReservation.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="refreshReservation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/refreshReservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
               <folding>
-                <marker date="1519925840784" expanded="true" signature="152:231" ph="SELECT perso... reservations" />
-                <marker date="1519925840784" expanded="true" signature="152:232" ph="SELECT perso... reservations" />
-                <marker date="1519925840784" expanded="true" signature="152:236" ph="SELECT perso... reservations" />
-                <marker date="1519925840784" expanded="true" signature="152:237" ph="SELECT perso... reservations" />
+                <marker date="1519931796607" expanded="true" signature="152:231" ph="SELECT perso... reservations" />
+                <marker date="1519931796607" expanded="true" signature="152:232" ph="SELECT perso... reservations" />
+                <marker date="1519931796607" expanded="true" signature="152:236" ph="SELECT perso... reservations" />
+                <marker date="1519931796607" expanded="true" signature="152:237" ph="SELECT perso... reservations" />
+                <marker date="1519931796607" expanded="true" signature="507:865" ph="..." />
+                <marker date="1519931796607" expanded="true" signature="507:893" ph="..." />
+                <marker date="1519931796607" expanded="true" signature="512:716" ph="..." />
+                <marker date="1519931796607" expanded="true" signature="532:710" ph="..." />
+                <marker date="1519931796607" expanded="true" signature="585:698" ph="..." />
               </folding>
             </state>
           </provider>
@@ -68,8 +73,8 @@
       <file leaf-file-name="reservation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="112" column="30" lean-forward="false" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
+            <state relative-caret-position="385">
+              <caret line="115" column="35" lean-forward="false" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -86,11 +91,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/addReservation.php" />
         <option value="$PROJECT_DIR$/js/refreshReservation.php" />
-        <option value="$PROJECT_DIR$/js/Script.js" />
-        <option value="$PROJECT_DIR$/refreshReservation.php" />
         <option value="$PROJECT_DIR$/reservation.php" />
+        <option value="$PROJECT_DIR$/refreshReservation.php" />
+        <option value="$PROJECT_DIR$/js/Script.js" />
+        <option value="$PROJECT_DIR$/addReservation.php" />
       </list>
     </option>
   </component>
@@ -101,9 +106,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="326" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
     <option name="width" value="974" />
     <option name="height" value="984" />
   </component>
@@ -172,18 +175,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519889613441</updated>
-      <workItem from="1519889615999" duration="8920000" />
+      <workItem from="1519889615999" duration="11611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8920000" />
+    <option name="totallyTimeSpent" value="11611000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="974" height="984" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50104386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -260,30 +262,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Script.js">
+    <entry file="file://$PROJECT_DIR$/refreshReservation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="3" lean-forward="false" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="221">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <marker date="1519931796607" expanded="true" signature="152:231" ph="SELECT perso... reservations" />
+            <marker date="1519931796607" expanded="true" signature="152:232" ph="SELECT perso... reservations" />
+            <marker date="1519931796607" expanded="true" signature="152:236" ph="SELECT perso... reservations" />
+            <marker date="1519931796607" expanded="true" signature="152:237" ph="SELECT perso... reservations" />
+            <marker date="1519931796607" expanded="true" signature="507:865" ph="..." />
+            <marker date="1519931796607" expanded="true" signature="507:893" ph="..." />
+            <marker date="1519931796607" expanded="true" signature="512:716" ph="..." />
+            <marker date="1519931796607" expanded="true" signature="532:710" ph="..." />
+            <marker date="1519931796607" expanded="true" signature="585:698" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addReservation.php">
+    <entry file="file://$PROJECT_DIR$/js/Script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <marker date="1519924239155" expanded="true" signature="707:950" ph="SELECT * FRO... reservations" />
-            <marker date="1519924239155" expanded="true" signature="707:951" ph="SELECT * FRO... reservations" />
-            <marker date="1519924239155" expanded="true" signature="1090:1226" ph="INSERT INTO reservations... " />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reservation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="112" column="30" lean-forward="false" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
+        <state relative-caret-position="385">
+          <caret line="115" column="35" lean-forward="false" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -291,15 +299,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/refreshReservation.php">
+    <entry file="file://$PROJECT_DIR$/addReservation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="459">
+          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
           <folding>
-            <marker date="1519925840784" expanded="true" signature="152:231" ph="SELECT perso... reservations" />
-            <marker date="1519925840784" expanded="true" signature="152:232" ph="SELECT perso... reservations" />
-            <marker date="1519925840784" expanded="true" signature="152:236" ph="SELECT perso... reservations" />
-            <marker date="1519925840784" expanded="true" signature="152:237" ph="SELECT perso... reservations" />
+            <marker date="1519931937769" expanded="true" signature="707:950" ph="SELECT * FRO... reservations" />
+            <marker date="1519931937769" expanded="true" signature="707:951" ph="SELECT * FRO... reservations" />
+            <marker date="1519931937769" expanded="true" signature="1088:1224" ph="INSERT INTO reservations... " />
           </folding>
         </state>
       </provider>

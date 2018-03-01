@@ -23,7 +23,7 @@ $(document).ready(function() {
     var refresh = setInterval(function() {
         console.log("aktualisiert");
         $("#reservations").load("refreshReservation.php");
-    }, 300);
+    }, 3000);
 });
 //Communication with the backend
 $(function () {
