@@ -24,6 +24,9 @@
     <!-- for the Time -->
     <link rel="stylesheet" href="clockpicker/jquery-clockpicker.min.css">
     <script src="clockpicker/jquery-clockpicker.min.js"></script>
+    <!-- Growl -->
+    <script src="growl/jquery.growl.js" type="text/javascript"></script>
+    <link href="growl/jquery.growl.css" rel="stylesheet" type="text/css"/>
 
     <script src="js/Script.js"></script>
 </head>
@@ -83,7 +86,7 @@ include("navbar.php");
             <div class="column"> <!--Places-->
 
                    <div class="select">
-                        <select name="place">
+                        <select id="place" name="place">
                             <option class="dropdown-item"> Platz 1 </option>
                             <option class="dropdown-item"> Platz 2 </option>
                         </select>
@@ -107,22 +110,14 @@ include("navbar.php");
                 <thead>
                 <tr>
                     <th></th>
+                    <th> Datum</th>
                     <th> Von</th>
                     <th> Bis</th>
                     <th> Platz</th>
                     <th> Status</th>
                 </tr>
                 </thead>
-                <tfoot>
-                <tr>
-                    <th> Elemente</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                </tfoot>
-                <tbody>
+                <tbody id="reservations">
                 <tr>
                     <td>
                         <div class="field">

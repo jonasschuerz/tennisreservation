@@ -21,8 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function() {
     $("#reservations").load("refreshReservation.php");
     var refresh = setInterval(function() {
+        console.log("aktualisiert");
         $("#reservations").load("refreshReservation.php");
-    }, 100);
+    }, 300);
 });
 //Communication with the backend
 $(function () {
@@ -48,21 +49,25 @@ $(function () {
     })
     $('#addReservation').on('click', function () {
         var registration = {
-            date: $('#Date').val(),
+            date: $('#date').val(),
             fromTime: $('#fromTime').val(),
             toTime: $('#toTime').val(),
-            place: $('#place'),
+            place: $('#place').val(),
         }
         $.ajax({
             type: "Post",
             url: "addReservation.php",
             data: registration,
             success: function (value) {
-                console.log(value);
-                if(value.localeCompare("false") === 0){
-                    $.growl.error({message: "Reservierung fehlgeschlagen", size: "large" });
+                if(value.localeCompare("false date") === 0){
+                    $.growl.error({message: "Zeit Angabe falsch", size: "large", duration: 4500});
                 }
-                else $.growl.notice({title: "Success", message: "Erfolgreich reserviert", size: "large" });;
+                else if(value.localeCompare("false existent") === 0){
+                    $.growl.error({message: "Platz zu dieser Zeit schon reserviert", size: "large", duration: 4500 });
+                }
+                else {
+                    $.growl.notice({message: "Erfolgreich reserviert", size: "large",duration: 4500 });
+                }
             }
         })
     })
