@@ -27,20 +27,17 @@ function isTriggerd(id){
         }
     }
     else{
-        if(!isTicked.includes(id)){
-            for(var i = 0; i < isTicked.length; i++){
-                if(element == id) isTicked.splice(i, 1);
+        for(var i = 0; i < isTicked.length; i++){
+            if(isTicked[i] == id) {
+                isTicked = $.grep(isTicked, function(value) {
+                    return value != id;
+                });
             }
         }
     }
-    console.log(isTicked);
 }
 $(function refresh() {
     var reservations = $('#reservations');
-    if (window.location.pathname !== '/reservation.php')
-    {
-        return;
-    }
     $.ajax({
         url: 'refreshReservation.php',
         success: function(data) {
@@ -55,12 +52,12 @@ $(function refresh() {
                     }
                 }
                 if(!exists) {
-                    reservations.append('<tr><td><input class="is-checkradio is-danger" id="' + reservation.id + '" type="checkbox"><label for="' + reservation.id + '"></label></td><td>' + reservation.date + '</td><td>' + reservation.fromTime + '</td><td>' + reservation.toTime + '</td><td>' + reservation.place + '</td></tr>')
+                    reservations.append('<tr><td><input class="is-checkradio is-danger" id="' + reservation.id + '" type="checkbox" onclick="isTriggerd(' + reservation.id + ')"><label for="' + reservation.id + '"></label></td><td>' + reservation.date + '</td><td>' + reservation.fromTime + '</td><td>' + reservation.toTime + '</td><td>' + reservation.place + '</td></tr>')
                 }
             })
         },
         complete: function() {
-            setTimeout(refresh, 5000);
+            setTimeout(refresh, 300);
         }
     });
 });
@@ -112,11 +109,11 @@ $(function () {
         })
     })
     $('#deleteRegistration').on('click', function () {
-        var registrations = {}
+        console.log(isTicked);
         $.ajax({
             type: "Post",
             url: "delReservation.php",
-            data: registrations,
+            data: {isTicked: isTicked},
             success: function (value) {
                 console.log(value);
                 if(value.localeCompare("false") === 0){

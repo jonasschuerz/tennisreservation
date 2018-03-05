@@ -5,10 +5,10 @@
     $fromTime = $_POST['fromTime'];
     $toTime = $_POST['toTime'];
     $place = $_POST['place'];
-//  $date = "10-02-2018";
-//  $fromTime = "18:00";
-//  $toTime = "19:00";
-//  $place = "Platz 1";
+ // $date = "10-02-2021";
+ // $fromTime = "18:00";
+ // $toTime = "19:00";
+  $place = "Platz 1";
     if(empty($place) || empty($date) || empty($fromTime)  || empty($toTime) || $toTime < $fromTime){
         echo "false date";
         die();
@@ -18,10 +18,9 @@
     $db = Database::get_instance();
     $fromDate = $date . " ". $fromTime;
     $toDate = $date . " ". $toTime;
-//echo $fromDate . "<br>" . $toDate ." <br>";
     $res = $db->query("SELECT * FROM reservations WHERE '".$place."' = place AND (( STR_TO_DATE('" .$fromDate ."', '" . $format ."') >= from_Date OR STR_TO_DATE('" . $toDate ."', '" .$format ."') >= from_date) And STR_TO_DATE('" .$fromDate."', '" .$format."') < to_Date)");
     $res = $db->to_array($res);
-    if(!empty($res)){
+    if(!empty($res[0])){
         echo "false existent";
         die();
     }
