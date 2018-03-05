@@ -1,22 +1,21 @@
 <?php
 require('Back-End/Database.php');
 require('Back-End/AccountSession.php');
-
+//setlocale(LC_TIME, "de_DE"); //lokal nicht installiert
 $db = Database::get_instance();
 $returnString = "";
-$res = $db->query("SELECT person_id, place, from_Date, to_Date FROM reservations WHERE person_id = ". 0);
+$res = $db->query("SELECT person_id, place, from_Date, to_Date, id FROM reservations WHERE person_id = ". 0 ." order by from_Date");
+if($res->num_rows == 0){
+    echo "";
+    die();
+}
 $res = $db->to_array($res);
-//echo print_r($res). "<br>";
+$objects = array();
 foreach ($res as $value){
-//    echo print_r($value);
     $date = substr($value->from_Date, 0, 10);
+    $timestamp = strtotime(substr($value->from_Date, 0, 10));
     $from = substr($value->from_Date, 11, 5);
     $to = substr($value->to_Date, 11, 5);
-    $res = $res . '<tr> <td> <div class="field"> <p class="control"> <div class="b-checkbox is-dark"> <input id="checkbox" class="styled" type="checkbox"> 
-                    <label for="checkbox"> </label> </div> </p> </div> </td>
-                    <td> '.$date.'</td>
-                    <td> '. $from .'</td>
-                    <td> '. $to .'</td>
-                    <td> '.$value->place .'</td> </tr>';
+    array_push($objects, array('id' => $value->id, 'date' =>$date,'fromTime' => $from,'toTime' => $to,'place' => $value->place));
 }
-echo $res;
+echo json_encode($objects);

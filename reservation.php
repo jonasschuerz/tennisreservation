@@ -85,21 +85,23 @@ include("navbar.php");
 
             <div class="column"> <!--Places-->
 
-                   <div class="select">
-                        <select id="place" name="place">
-                            <option class="dropdown-item"> Platz 1 </option>
-                            <option class="dropdown-item"> Platz 2 </option>
-                        </select>
-                    </div>
+                <div class="select">
+                    <select id="place" name="place">
+                        <option class="dropdown-item"> Platz 1</option>
+                        <option class="dropdown-item"> Platz 2</option>
+                    </select>
+                </div>
 
             </div>
             <div class="column is-5 ">
-                <button id="addReservation" class="button is-primary"><i class="fas fa-plus"></i>&nbsp Platz reservieren</button>
+                <button id="addReservation" class="button is-primary"><i class="fas fa-plus"></i>&nbsp Platz reservieren
+                </button>
             </div>
         </div>
     </div>
     <div style="background-color: white; height: 2px;"></div>
     <div class="tabs is-centered" style="background-color: #404040; ">
+
         <ul>
             <li class="is-active"><a style="color: white;">meine Reservierungen</a></li>
         </ul>
@@ -117,43 +119,13 @@ include("navbar.php");
                 </tr>
                 </thead>
                 <tbody id="reservations">
-                <tr>
-                    <td>
-                        <div class="field">
-                            <p class="control">
-                            <div class="b-checkbox is-dark">
-                                <input id="checkbox" class="styled" type="checkbox">
-                                <label for="checkbox">
-                                </label>
-                            </div>
-                            </p>
-                        </div>
-                    </td>
-                    <td> von</td>
-                    <td> bis</td>
-                    <td> PlatzNR</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="field">
-                            <p class="control">
-                            <div class="b-checkbox is-dark">
-                                <input id="checkbox01" class="styled" type="checkbox">
-                                <label for="checkbox01">
-                                </label>
-                            </div>
-                            </p>
-                        </div>
-                    </td>
-                    <td> Von</td>
-                    <td> Bis</td>
-                    <td> 2PlatzNR</td>
-                </tr>
                 </tbody>
             </table>
         </div>
         <div class="" style="background: grey; padding:  0.75em 0.75em 0.75em 0.75em"> <!--Button-->
-            <button id="deleteRegistration" class="button is-danger " style=""><i class="fas fa-trash-alt"></i> &nbsp Auswahl Löschen</button>
+            <button id="deleteRegistration" class="button is-danger " style=""><i class="fas fa-trash-alt"></i> &nbsp
+                Auswahl Löschen
+            </button>
         </div>
     </div>
 </div>

@@ -18,12 +18,51 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 //refresh my reseration
-$(document).ready(function() {
-    $("#reservations").load("refreshReservation.php");
-    var refresh = setInterval(function() {
-        console.log("aktualisiert");
-        $("#reservations").load("refreshReservation.php");
-    }, 3000);
+var isTicked = new Array();
+function isTriggerd(id){
+    console.log("ticked");
+    if(document.getElementById(id).checked){
+        if(!isTicked.includes(id)){
+            isTicked.push(id);
+        }
+    }
+    else{
+        if(!isTicked.includes(id)){
+            for(var i = 0; i < isTicked.length; i++){
+                if(element == id) isTicked.splice(i, 1);
+            }
+        }
+    }
+    console.log(isTicked);
+}
+$(function refresh() {
+    var reservations = $('#reservations');
+    if (window.location.pathname !== '/reservation.php')
+    {
+        return;
+    }
+    $.ajax({
+        url: 'refreshReservation.php',
+        success: function(data) {
+            var data = JSON.parse(data);
+            $.each(data, function (i, reservation) {
+                var elements = document.querySelector("tbody[id=reservations]");
+                var exists = false;
+                for(var i = 0; i < elements.rows.length; i++) {
+                    if(elements.rows[i].cells[0].children[0].id == reservation.id){
+                        exists = true;
+                        break;
+                    }
+                }
+                if(!exists) {
+                    reservations.append('<tr><td><input class="is-checkradio is-danger" id="' + reservation.id + '" type="checkbox"><label for="' + reservation.id + '"></label></td><td>' + reservation.date + '</td><td>' + reservation.fromTime + '</td><td>' + reservation.toTime + '</td><td>' + reservation.place + '</td></tr>')
+                }
+            })
+        },
+        complete: function() {
+            setTimeout(refresh, 5000);
+        }
+    });
 });
 //Communication with the backend
 $(function () {
@@ -59,6 +98,7 @@ $(function () {
             url: "addReservation.php",
             data: registration,
             success: function (value) {
+                console.log(value);
                 if(value.localeCompare("false date") === 0){
                     $.growl.error({message: "Zeit Angabe falsch", size: "large", duration: 4500});
                 }

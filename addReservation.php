@@ -18,13 +18,13 @@
     $db = Database::get_instance();
     $fromDate = $date . " ". $fromTime;
     $toDate = $date . " ". $toTime;
-    //echo $fromDate . "<br>" . $toDate ." <br>";
-    $res = $db->query("SELECT * FROM reservations WHERE '".$place."' = place AND ( STR_TO_DATE('" .$fromDate ."', '" . $format ."') >= from_Date OR STR_TO_DATE('" . $toDate ."', '" .$format ."') >= from_date OR STR_TO_DATE('" .$fromDate."', '" .$format."') < to_Date)");
-    //echo $res->num_rows . "<br>";
-    if($res->num_rows == 1){
+//echo $fromDate . "<br>" . $toDate ." <br>";
+    $res = $db->query("SELECT * FROM reservations WHERE '".$place."' = place AND (( STR_TO_DATE('" .$fromDate ."', '" . $format ."') >= from_Date OR STR_TO_DATE('" . $toDate ."', '" .$format ."') >= from_date) And STR_TO_DATE('" .$fromDate."', '" .$format."') < to_Date)");
+    $res = $db->to_array($res);
+    if(!empty($res)){
         echo "false existent";
         die();
     }
-    $db->query("INSERT INTO reservations VALUES (0, '".$place."',STR_TO_DATE('".$fromDate."', '".$format."'), STR_TO_DATE('".$toDate."', '".$format."'))");
+    $db->query("INSERT INTO reservations (person_id, place, from_Date, to_Date) VALUES (0, '".$place."',STR_TO_DATE('".$fromDate."', '".$format."'), STR_TO_DATE('".$toDate."', '".$format."'))");
     echo "true";
 
