@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //refresh my reseration
 var isTicked = new Array();
 function isTriggerd(id){
-    console.log("ticked");
     if(document.getElementById(id).checked){
         if(!isTicked.includes(id)){
             isTicked.push(id);
@@ -37,24 +36,36 @@ function isTriggerd(id){
     }
 }
 $(function refresh() {
-    var reservations = $('#reservations');
     $.ajax({
         url: 'refreshReservation.php',
         success: function(data) {
+            if(data === "") return;
             var data = JSON.parse(data);
-            $.each(data, function (i, reservation) {
-                var elements = document.querySelector("tbody[id=reservations]");
+            var tableElements = document.querySelector("tbody[id=reservations]");
+
+            for(var i=0; i < data.length; i++){
                 var exists = false;
-                for(var i = 0; i < elements.rows.length; i++) {
-                    if(elements.rows[i].cells[0].children[0].id == reservation.id){
+                for(var j=0; j< tableElements.rows.length; j++){
+                    if(data[i].id == tableElements.rows[j].cells[0].children[0].id){
                         exists = true;
                         break;
                     }
                 }
-                if(!exists) {
-                    reservations.append('<tr><td><input class="is-checkradio is-danger" id="' + reservation.id + '" type="checkbox" onclick="isTriggerd(' + reservation.id + ')"><label for="' + reservation.id + '"></label></td><td>' + reservation.date + '</td><td>' + reservation.fromTime + '</td><td>' + reservation.toTime + '</td><td>' + reservation.place + '</td></tr>')
+                if(!exists){
+                    $('<tr><td><input class="is-checkradio is-danger" id="' + data[i].id + '" type="checkbox" onclick="isTriggerd(' + data[i].id + ')"><label for="' + data[i].id + '"></label></td><td>' + data[i].date + '</td><td>' + data[i].fromTime + '</td><td>' + data[i].toTime + '</td><td>' + data[i].place + '</td></tr>').appendTo(tableElements);
                 }
-            })
+            }
+            for(var i=0; i < tableElements.rows.length; i++){
+                var exists = false;
+                for(var j=0; j < data.length; j++){
+                    if(data[j].id === tableElements.rows[i].cells[0].children[0].id){
+                        exists = true;
+                    }
+                }
+                if(!exists){
+                    tableElements.removeChild(tableElements.childNodes[i]);
+                }
+            }
         },
         complete: function() {
             setTimeout(refresh, 300);
