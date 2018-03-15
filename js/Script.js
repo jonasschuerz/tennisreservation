@@ -44,15 +44,26 @@ $(function refresh() {
             var tableElements = document.querySelector("tbody[id=reservations]");
 
             for(var i=0; i < data.length; i++){
-                var exists = false;
+                var index = 0;
                 for(var j=0; j< tableElements.rows.length; j++){
-                    if(data[i].id == tableElements.rows[j].cells[0].children[0].id){
-                        exists = true;
+                    console.dir(tableElements.rows[j].id);
+                    if(data[i].id == tableElements.rows[j].id){
+                        index = -1;
                         break;
                     }
+                    if(data[i].date <= tableElements.rows[j].cells[0].children[1])
+                        console.log("increment index " + index);
+                        index++;
                 }
-                if(!exists){
-                    $('<tr><td><input class="is-checkradio is-danger" id="' + data[i].id + '" type="checkbox" onclick="isTriggerd(' + data[i].id + ')"><label for="' + data[i].id + '"></label></td><td>' + data[i].date + '</td><td>' + data[i].fromTime + '</td><td>' + data[i].toTime + '</td><td>' + data[i].place + '</td></tr>').appendTo(tableElements);
+                if(index !== -1){
+                    $(tableElements).last().after('<tr id="' + data[i].id + '"><td><input class="is-checkradio is-danger" id="check' + data[i].id + '" type="checkbox" onclick="isTriggerd(' + data[i].id + ')"><label for="check' + data[i].id + '"></label></td><td>' + data[i].date + '</td><td>' + data[i].fromTime + '</td><td>' + data[i].toTime + '</td><td>' + data[i].place + '<td></tr>');
+                    console.log(index);
+
+//                    if($('#reservations').find('input#'+index)){
+//                        console.log('einfügen')
+//                        $('<tr id="' + data[i].id + '"><td><input class="is-checkradio is-danger" id="check' + data[i].id + '" type="checkbox" onclick="isTriggerd(' + data[i].id + ')"><label for="check' + data[i].id + '"></label></td><td>' + data[i].date + '</td><td>' + data[i].fromTime + '</td><td>' + data[i].toTime + '</td><td>' + data[i].place + '</td></tr>').append($('#'+index));
+//                    }
+//                    else $('<tr id="' + data[i].id + '"><td><input class="is-checkradio is-danger" id="check' + data[i].id + '" type="checkbox" onclick="isTriggerd(' + data[i].id + ')"><label for="check' + data[i].id + '"></label></td><td>' + data[i].date + '</td><td>' + data[i].fromTime + '</td><td>' + data[i].toTime + '</td><td>' + data[i].place + '</td></tr>').appendChild(tableElements);
                 }
             }
             for(var i=0; i < tableElements.rows.length; i++){
@@ -106,7 +117,6 @@ $(function () {
             url: "addReservation.php",
             data: registration,
             success: function (value) {
-                console.log(value);
                 if(value.localeCompare("false date") === 0){
                     $.growl.error({message: "Zeit Angabe falsch", size: "large", duration: 4500});
                 }
@@ -126,7 +136,6 @@ $(function () {
             url: "delReservation.php",
             data: {isTicked: isTicked},
             success: function (value) {
-                console.log(value);
                 if(value.localeCompare("false") === 0){
                     $.growl.error({message: "Löschvorgang fehlgeschlagen", size: "large" });
                 }
@@ -139,7 +148,6 @@ $(function () {
             type: "Post",
             url: "handlelogout.php",
             success: function (value) {
-                console.log(value);
                 if(value.localeCompare("false") === 0){
                     $.growl.error({message: "Logout fehlgeschlagen", size: "large" });
                 }

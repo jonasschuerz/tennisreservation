@@ -4,7 +4,7 @@ require('Back-End/AccountSession.php');
 //setlocale(LC_TIME, "de_DE"); //lokal nicht installiert
 $db = Database::get_instance();
 $returnString = "";
-$res = $db->query("SELECT person_id, place, from_Date, to_Date, id FROM reservations WHERE person_id = ". 0 ." order by from_Date");
+$res = $db->query("SELECT person_id, place, from_Date, to_Date, id FROM reservations WHERE person_id = ". 0 ); //." order by from_Date asc");
 if($res->num_rows == 0){
     echo "";
     die();
