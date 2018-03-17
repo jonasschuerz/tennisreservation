@@ -33,7 +33,6 @@ if (isset($errorMessage)) {
     echo '<script>$.growl.error({ message: "Email oder Passwort ist ungültig!", size: "large" });</script>';
 }
 ?>
-
 <div class="section">
     <div class="container"
          style="width: 100%; max-width: 400px; padding: 25px; border-radius: 25px; background-color: #4d4d4d;">

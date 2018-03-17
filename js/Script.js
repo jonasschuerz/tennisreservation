@@ -35,6 +35,7 @@ function isTriggerd(id){
         }
     }
 }
+/*
 $(function refresh() {
     $.ajax({
         url: 'refreshReservation.php',
@@ -82,7 +83,7 @@ $(function refresh() {
             setTimeout(refresh, 300);
         }
     });
-});
+});*/
 //Communication with the backend
 $(function () {
     var $email = $('#email');

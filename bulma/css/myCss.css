@@ -1,0 +1,14 @@
+ul.is-unstyled {
+    list-style: none;
+}
+
+li.is-inlined{
+    display: inline;
+}
+.is-vertical-center {
+    display: flex;
+    align-items: center;
+}
+figure img {
+    border: solid whitesmoke;
+}

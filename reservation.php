@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <?php require("islogedin.php"); ?>
 <html style="height: 100%;">
 <head>
@@ -39,14 +38,14 @@ if (isset($errorMessage)) {
 include("navbar.php");
 ?>
 <div id="particles-js" style="position: absolute; width: 100%; height: 100%;"></div>
-<div class="container" style="background-color: #4d4d4d">
+<div class="container" style="background-color: rgba(77,77,77, 0.1);">
     <div class="tabs is-centered" style="background-color: #404040; ">
         <ul>
             <li class="is-active"><a style="color: white;">Neue Reservierungen</a></li>
         </ul>
     </div>
     <div class="animated zoomIn" style="padding: 0.05em 2% 0.2% 2%;"> <!-- Content -->
-        <div class="columns" style="margin: 0 0 20px 0; background-color: grey; ">
+        <div class="columns" style="margin: 0 0 20px 0; ">
             <!-- Place and Date Selection-->
             <div class="column is-2"> <!--Date-->
                 <input type="text" id="date" class="input calendar" placeholder="Datum"/>
@@ -107,7 +106,7 @@ include("navbar.php");
         </ul>
     </div>
     <div class="animated zoomIn" style="padding: 0.05em 2% 2% 2%;">
-        <div class="" style="background-color: grey; "> <!--Reservierungen-->
+        <div class=""> <!--Reservierungen-->
             <table class="table" style="width:100%">
                 <thead>
                 <tr>
@@ -122,7 +121,7 @@ include("navbar.php");
                 </tbody>
             </table>
         </div>
-        <div class="" style="background: grey; padding:  0.75em 0.75em 0.75em 0.75em"> <!--Button-->
+        <div class="" style="padding:  0.75em 0.75em 0.75em 0.75em"> <!--Button-->
             <button id="deleteRegistration" class="button is-danger " style=""><i class="fas fa-trash-alt"></i> &nbsp
                 Auswahl Löschen
             </button>

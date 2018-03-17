@@ -30,7 +30,7 @@
             <div class="navbar-item">
                 <div class="field is-grouped">
                     <p class="control">
-                        <button id="logout" class="button" style="background-color: #58ACFA; color: white;">
+                        <button id="logout" class="button" style="  background-color: #58ACFA; color: white;">
                             <span>Abmelden&nbsp&nbsp</span>
                             <i class="fas fa-sign-out-alt"></i>
                         </button>
@@ -40,3 +40,4 @@
         </div>
     </div>
 </nav>
+
