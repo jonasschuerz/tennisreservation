@@ -49,7 +49,7 @@ class AccountSession {
         return PublicKey::get($this->a_id);
     }
 
-    function logout() {
+    public static function logout() {
         session_destroy();
         return true;
     }

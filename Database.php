@@ -3,10 +3,10 @@
 class Database {
 
     private $hostname = "127.0.0.1";
-    private $username = "web_structure";
-    private $password = "password";
-    private $port = "3306";
-    private $db_name = "webstructure";
+    private $username = "root";
+    private $password = "";
+   // private $port = "32771";
+    private $db_name = "syp";
 
     private $connection = false;
 
