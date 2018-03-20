@@ -26,6 +26,11 @@
     <!-- Growl -->
     <script src="growl/jquery.growl.js" type="text/javascript"></script>
     <link href="growl/jquery.growl.css" rel="stylesheet" type="text/css"/>
+    <!-- fullCalendar-->
+    <script src="fullCalendar/fullcalendar.js" type="text/javascript"></script>
+    <script src="fullCalendar/locale-all.js" type="text/javascript"></script>
+    <script src="js/calendar.js"></script>
+    <link href="fullCalendar/fullcalendar.css" rel="stylesheet" type="text/css">
 
     <script src="js/Script.js"></script>
 </head>
@@ -37,14 +42,14 @@ if (isset($errorMessage)) {
 }
 include("navbar.php");
 ?>
-<div id="particles-js" style="position: absolute; width: 100%; height: 100%;"></div>
 <div class="container" style="background-color: rgba(77,77,77, 0.1);">
     <div class="tabs is-centered" style="background-color: #404040; ">
         <ul>
             <li class="is-active"><a style="color: white;">Neue Reservierungen</a></li>
         </ul>
     </div>
-    <div class="animated zoomIn" style="padding: 0.05em 2% 0.2% 2%;"> <!-- Content -->
+    <!-- Neue Reservierung -->
+    <div class="animated zoomIn" style="padding: 0.05em 2% 0.2% 2%;">
         <div class="columns" style="margin: 0 0 20px 0; ">
             <!-- Place and Date Selection-->
             <div class="column is-2"> <!--Date-->
@@ -99,28 +104,14 @@ include("navbar.php");
         </div>
     </div>
     <div style="background-color: white; height: 2px;"></div>
+    <!-- Calender mit Reservierungen -->
     <div class="tabs is-centered" style="background-color: #404040; ">
-
         <ul>
             <li class="is-active"><a style="color: white;">meine Reservierungen</a></li>
         </ul>
     </div>
     <div class="animated zoomIn" style="padding: 0.05em 2% 2% 2%;">
-        <div class=""> <!--Reservierungen-->
-            <table class="table" style="width:100%">
-                <thead>
-                <tr>
-                    <th></th>
-                    <th> Datum</th>
-                    <th> Von</th>
-                    <th> Bis</th>
-                    <th> Platz</th>
-                </tr>
-                </thead>
-                <tbody id="reservations">
-                </tbody>
-            </table>
-        </div>
+        <div id="calendarReservation"></div>
         <div class="" style="padding:  0.75em 0.75em 0.75em 0.75em"> <!--Button-->
             <button id="deleteRegistration" class="button is-danger " style=""><i class="fas fa-trash-alt"></i> &nbsp
                 Auswahl Löschen
@@ -128,11 +119,5 @@ include("navbar.php");
         </div>
     </div>
 </div>
-
 </body>
-<script>particlesJS.load('particles-js', 'particles/particlesjs-config.json', function () {
-        console.log('callback - particles.js config loaded');
-    });
-</script>
-
 </html>

@@ -18,24 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 //refresh my reseration
-var isTicked = new Array();
-function isTriggerd(id){
-    if(document.getElementById(id).checked){
-        if(!isTicked.includes(id)){
-            isTicked.push(id);
-        }
-    }
-    else{
-        for(var i = 0; i < isTicked.length; i++){
-            if(isTicked[i] == id) {
-                isTicked = $.grep(isTicked, function(value) {
-                    return value != id;
-                });
-            }
-        }
-    }
-}
-/*
 $(function refresh() {
     $.ajax({
         url: 'refreshReservation.php',
@@ -45,20 +27,23 @@ $(function refresh() {
             var tableElements = document.querySelector("tbody[id=reservations]");
 
             for(var i=0; i < data.length; i++){
-                var index = 0;
+
+                var exists = false;
                 for(var j=0; j< tableElements.rows.length; j++){
-                    console.dir(tableElements.rows[j].id);
-                    if(data[i].id == tableElements.rows[j].id){
-                        index = -1;
+                    if(data[i].id == tableElements.rows[j].cells[0].children[0].id){
+                        exists = true;
+
                         break;
                     }
-                    if(data[i].date <= tableElements.rows[j].cells[0].children[1])
+                   /* if(data[i].date <= tableElements.rows[j].cells[0].children[1]){
                         console.log("increment index " + index);
                         index++;
+                    }*/
+
                 }
-                if(index !== -1){
-                    $(tableElements).last().after('<tr id="' + data[i].id + '"><td><input class="is-checkradio is-danger" id="check' + data[i].id + '" type="checkbox" onclick="isTriggerd(' + data[i].id + ')"><label for="check' + data[i].id + '"></label></td><td>' + data[i].date + '</td><td>' + data[i].fromTime + '</td><td>' + data[i].toTime + '</td><td>' + data[i].place + '<td></tr>');
-                    console.log(index);
+                if(!exists){
+                    $('<tr><td><input class="is-checkradio is-danger" id="' + data[i].id + '" type="checkbox" onclick="isTriggerd(' + data[i].id + ')"><label for="' + data[i].id + '"></label></td><td>' + data[i].date + '</td><td>' + data[i].fromTime + '</td><td>' + data[i].toTime + '</td><td>' + data[i].place + '</td></tr>').appendTo(tableElements);
+
 
 //                    if($('#reservations').find('input#'+index)){
 //                        console.log('einfügen')
@@ -83,7 +68,7 @@ $(function refresh() {
             setTimeout(refresh, 300);
         }
     });
-});*/
+});
 //Communication with the backend
 $(function () {
     var $email = $('#email');
@@ -130,12 +115,12 @@ $(function () {
             }
         })
     })
-    $('#deleteRegistration').on('click', function () {
+   /* $('#deleteRegistration').on('click', function () {
         console.log(isTicked);
         $.ajax({
             type: "Post",
             url: "delReservation.php",
-            data: {isTicked: isTicked},
+            data: ,
             success: function (value) {
                 if(value.localeCompare("false") === 0){
                     $.growl.error({message: "Löschvorgang fehlgeschlagen", size: "large" });
@@ -143,7 +128,7 @@ $(function () {
                 else $.growl.notice({title: "Success", message: "Erfolgreich gelöscht", size: "large" });;
             }
         })
-    })
+    })*/
     $('#logout').on('click', function () {
         $.ajax({
             type: "Post",

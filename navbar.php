@@ -25,6 +25,10 @@
                 <i class="fas fa-address-book"></i>
                 &nbsp  Kontakt
             </a>
+            <a class="navbar-item" href="administrator.php">
+                <i class="fas fa-user-circle"></i>
+                &nbsp  Administrator
+            </a>
         </div>
         <div class="navbar-end">
             <div class="navbar-item">

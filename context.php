@@ -73,6 +73,7 @@ include("navbar.php");
             </div>
         </div>
     </div>
+
     <div class="column">
         <div class="">
             <div class="field">
