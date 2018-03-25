@@ -19,6 +19,7 @@ Jonas Schürz
 |  0.2  | Alle | Überarbeitung | Lukas Feck-Melzer
 |  0.3  | Alle | Überarbeitung | Lukas Feck-Melzer
 |  0.4  | Alle | Überarbeitung | Lukas Feck-Melzer
+|  0.5  | Alle | Überarbeitung | Jonas Schürz
 
 
 ## Inhalt
@@ -51,7 +52,8 @@ Die Tennisplatzreservierung wird durch ein Steckbrett am Tennisplatz geregelt. D
 Die derzeitige Reservierung durch Steckbretter ist, aufgrund dessen dass im Voraus zum Tennisplatz gefahren werden muss um zu reservieren, zeitintensiv und unsicher, da nicht sichergestellt wird, dass die vorgenommene Reservierung nicht von Anderen verändert wird.
 
 #### 2.1.2 Aufgabenstellung
-Die Reservierung durch Steckbretter soll durch eine Webapplikation ersetzt werden.
+Die Reservierung durch Steckbretter soll durch eine Webapplikation ersetzt werden. 
+Die Software soll für mehrere Vereine funktionieren. 
 
 #### 2.1.3 Glossar
 
