@@ -69,8 +69,8 @@ Plätze verwalten | Der Tennisverein bekommt einen neuen Platz | Man kann nun de
 Spieler verwalten | Ein neuer Spieler möchte dem Verein beitreten | Spieler kann sich nun einloggen und reservieren | Admin
 
 ### 2.2 Zielbestimmung
-Diese Webanwendung wird zum Reservieren der Tennisplätze verwendet werden. <Br>
-Die Zielgruppe wird von jungen Leuten bis zu älteren Leuten reichen. Deswegen setzen wir leichte Computerkenntnisse voraus.
+Das Ziel ist eine handhabbare Software zu erstellen und dass sich das Mitglied unnötige <Br>
+Kilometer spart zum Hinfahren um Reservierungen durchzuführen.
 
 ## 3 Funktionale Anforderungen
 Spieler/Vereinsmitglieder müssen Plätze reservieren und Reservierungen aufheben können. Der Vereinsadministrator muss Spieler/Mitglieder zu einem Verein hinzufügen und Plätze verwalten können.
@@ -89,7 +89,7 @@ Wir schätzen mit täglich 10 Reservierungen pro Tennisverein. (Im Sommer)<Br>
 Das fertige Projekt, welches beim Kunden ankommt, beinhaltet genau einen Aktivierungscode, der vom jeweiligen Vereinsadministrator eingelöst wird um Spieler/Mitglieder zum jeweiligen Verein hinzuzufügen und die Tennisplätze an sich festzulegen und zu konfigurieren.
 
 ## 7 Abnahmekriterien
-Die Platzreservierung muss fehlerfrei funktionieren.
+Durchspielen der Geschäftsprozesse, Tests durchführen
 
 ## 8 Abbildungsverzeichnis
 - Abb. 1: Klassendiagramm.png
