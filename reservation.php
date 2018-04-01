@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<?php require("islogedin.php"); ?>
-<html style="height: 100%;">
+<?php require("Back-End/islogedin.php"); ?>
+<html style="max-height: 100%;">
 <head>
     <meta charset="utf-8">
     <title>Startseite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- JQuery -->
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/moment.js"></script>
     <!-- Particle/ Animation -->
-    <link rel="stylesheet" href="animate.css">
-    <script src="particles/particles.js"></script>
+    <link rel="stylesheet" href="./css/animate.css">
     <!-- Bulma CSS-->
-    <link rel="stylesheet" href="./bulma/css/bulma.css">
+    <link rel="stylesheet" href="./css/bulma.css">
+    <link rel="stylesheet" href="./css/bulma-radio-checkbox.css">
+    <!-- Icons-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bulma/css/bulma-radio-checkbox.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <!-- for the Date -->
-    <link rel="stylesheet" href="calendar/css/pignose.calendar.min.css"/>
-    <script src="calendar/js/pignose.calendar.min.js"></script>
+    <link rel="stylesheet" href="calendar-pignose/css/pignose.calendar.min.css"/>
+    <script src="calendar-pignose/js/pignose.calendar.min.js"></script>
     <!-- for the Time -->
     <link rel="stylesheet" href="clockpicker/jquery-clockpicker.min.css">
     <script src="clockpicker/jquery-clockpicker.min.js"></script>
-    <!-- Growl -->
+    <!-- Notifications -->
     <script src="growl/jquery.growl.js" type="text/javascript"></script>
     <link href="growl/jquery.growl.css" rel="stylesheet" type="text/css"/>
     <!-- fullCalendar-->
@@ -31,10 +30,12 @@
     <script src="fullCalendar/locale-all.js" type="text/javascript"></script>
     <script src="js/calendar.js"></script>
     <link href="fullCalendar/fullcalendar.css" rel="stylesheet" type="text/css">
-
+    <!-- MyScript -->
     <script src="js/Script.js"></script>
+    <!-- MyStyle Options -->
+    <link rel="stylesheet" href="./css/myCss.css"/>
 </head>
-<body>
+<body >
 <?php
 if (isset($errorMessage)) {
     echo $errorMessage;
@@ -98,7 +99,7 @@ include("navbar.php");
 
             </div>
             <div class="column is-5 ">
-                <button id="addReservation" class="button is-primary"><i class="fas fa-plus"></i>&nbsp Platz reservieren
+                <button id="addReservation" class="button is-success"><i class="fas fa-plus"></i>&nbsp Platz reservieren
                 </button>
             </div>
         </div>
@@ -110,14 +111,15 @@ include("navbar.php");
             <li class="is-active"><a style="color: white;">meine Reservierungen</a></li>
         </ul>
     </div>
-    <div class="animated zoomIn" style="padding: 0.05em 2% 2% 2%;">
-        <div id="calendarReservation"></div>
+    <div class="animated zoomIn" style="padding: 0.05em 2% 2% 2%; height: 100%">
+        <div id="calendarReservation" ></div>
         <div class="" style="padding:  0.75em 0.75em 0.75em 0.75em"> <!--Button-->
-            <button id="deleteRegistration" class="button is-danger " style=""><i class="fas fa-trash-alt"></i> &nbsp
-                Auswahl Löschen
+            <button id="saveChange" onclick="updateData()" class="button is-white " style=""><i class="far fa-save"></i> &nbsp
+                Änderungen speichern
             </button>
         </div>
     </div>
 </div>
+
 </body>
 </html>
