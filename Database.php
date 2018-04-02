@@ -6,7 +6,7 @@ class Database {
     private $username = "root";
     private $password = "";
    // private $port = "32771";
-    private $db_name = "syp";
+    private $db_name = "test";
 
     private $connection = false;
 

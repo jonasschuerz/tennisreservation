@@ -1,6 +1,6 @@
 <?php
     require('AccountSession.php');
     if(AccountSession::logout()){
-        echo "true";
+        echo json_encode(array("error"=>false, "description"=>"Logout erfolgreich"));
     }
-    echo "false";
+    echo json_encode(array("error"=>true, "description"=>"Logout fehlgeschlagen"));
