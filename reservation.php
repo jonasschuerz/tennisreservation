@@ -35,7 +35,7 @@
     <!-- MyStyle Options -->
     <link rel="stylesheet" href="./css/myCss.css"/>
 </head>
-<body >
+<body onload="addOptionsPlace()" >
 <?php
 if (isset($errorMessage)) {
     echo $errorMessage;
@@ -65,7 +65,7 @@ include("navbar.php");
             </div>
             <div class="column is-2 input-group clockpicker" data-placement="left" data-align="top"
                  data-autoclose="true">
-                <input id="fromTime" type="text" class="input form-control" placeholder="Von-Uhrzeit">
+                <input id="startTime" type="text" class="input form-control" placeholder="Von-Uhrzeit">
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-time"></span>
                 </span>
@@ -77,7 +77,7 @@ include("navbar.php");
             </script>
             <div class="column is-2 input-group clockpicker" data-placement="left" data-align="top"
                  data-autoclose="true">
-                <input id="toTime" type="text" class="input form-control" placeholder="Bis-Uhrzeit">
+                <input id="endTime" type="text" class="input form-control" placeholder="Bis-Uhrzeit">
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-time"></span>
                 </span>
@@ -91,10 +91,7 @@ include("navbar.php");
             <div class="column"> <!--Places-->
 
                 <div class="select">
-                    <select id="place" name="place">
-                        <option class="dropdown-item"> Platz 1</option>
-                        <option class="dropdown-item"> Platz 2</option>
-                    </select>
+                    <select id="place" name="place"> </select>
                 </div>
 
             </div>

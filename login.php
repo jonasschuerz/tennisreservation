@@ -32,7 +32,6 @@
     <!-- MyScript -->
     <script src="js/Script.js"></script>
     <!-- Particle/ Animation -->
-    <link rel="stylesheet" href="animate.css">
     <script src="particles/particles.js"></script>
     <script>
         particlesJS.load('particles-js', 'particles/particlesjs-config.json', function () {

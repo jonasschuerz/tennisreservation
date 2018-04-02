@@ -17,6 +17,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+function addOptionsPlace() {
+    $.ajax({
+        type: 'Post',
+        url: './Back-End/getPlaces.php',
+        success: function (value) {
+            value = JSON.parse(value);
+            $.each(value, function (i, item) {
+                console.log(i);
+                $('#place').append($('<option>', {
+                    text: item['name'],
+                    class: 'dropdown-item'
+                }));
+            });
+
+
+        }
+    })
+}
 
 //Communication with the backend
 $(function () {
@@ -32,10 +50,14 @@ $(function () {
             url: "./Back-End/handlelogin.php",
             data: user,
             success: function (value) {
-                if(value.localeCompare("false") === 0){
-                    $.growl.error({ message: "Email oder Passwort ist ungültig!", size: "large" });
+                value = JSON.parse(value);
+                if(value['error'] === true){
+                    $.growl.error({message: value['description'], size: "large", duration: 4500});
                 }
-                else window.location = "index.php";
+                else if(value['error'] === false) {
+                    $.growl.notice({message: value['description'], size: "large",duration: 4500 });
+                    window.location = "index.php";
+                }
             }
         })
     })
@@ -44,10 +66,11 @@ $(function () {
             type: "Post",
             url: "Back-End/handlelogout.php",
             success: function (value) {
-                if(value.localeCompare("false") === 0){
-                    $.growl.error({message: "Logout fehlgeschlagen", size: "large" });
+                value = JSON.parse(value);
+                if(value['error'] === true){
+                    $.growl.error({message: value['description'], size: "large", duration: 4500});
                 }
-                else {
+                else if(value['error'] === false) {
                     window.location = "login.php";
                 }
             }

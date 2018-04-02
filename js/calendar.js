@@ -7,22 +7,22 @@ $(function () {
         allDaySlot: false,
         minTime: "00:00:00",
         maxTime: "23:59:00",
+        timeFormat: 'HH:mm',
         eventLimit: true,
         defaultView: $(window).width() < 768 ? 'listMonth' : 'month',
         header: $(window).width() < 768 ? { left: 'today', center: false, right: 'prev,next'} :
             { center: 'month,agendaWeek,listMonth' },
-        events:
-            {
+        events: {
                 url: 'Back-End/refreshReservation.php',
                 type: 'POST',
                 data: {},
                 error: function () {
-                    console.log("konnte nicht geladen werden");
+                    $.growl.error({message: "Reservierungen konnten nicht geladen werden", size: "large", duration: 4500});
                 },
                 editable: true,
                 color: 'grey',
                 textColor: 'white'
-            },
+        },
         views:
             {
             month: {
@@ -53,8 +53,8 @@ $(function () {
     $('#addReservation').on('click', function () {
         var registration = {
             date: $('#date').val(),
-            fromTime: $('#fromTime').val(),
-            toTime: $('#toTime').val(),
+            startTime: $('#startTime').val(),
+            endTime: $('#endTime').val(),
             place: $('#place').val(),
         }
         $.ajax({
