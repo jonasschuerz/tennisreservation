@@ -149,8 +149,11 @@ pre {
 }
 
 body {
-  background: linear-gradient(to bottom, #FFA500, #FFD700);
-  background-attachment: fixed;
+  background: url("backgorund.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: #4a4a4a;
   font-size: 1rem;
   font-weight: 400;

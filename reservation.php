@@ -43,7 +43,7 @@ if (isset($errorMessage)) {
 }
 include("navbar.php");
 ?>
-<div class="container" style="background-color: rgba(77,77,77, 0.1);">
+<div class="container" style="background-color: rgba(128,128,128, 0.9);">
     <div class="tabs is-centered" style="background-color: #404040; ">
         <ul>
             <li class="is-active"><a style="color: white;">Neue Reservierungen</a></li>

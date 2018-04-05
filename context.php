@@ -43,7 +43,7 @@ if (isset($errorMessage)) {
 }
 include("navbar.php");
 ?>
-<div class="container is-centered" style="background-color: rgba(77,77,77, 0.1);">
+<div class="container is-centered" style="  background-color: rgba(128,128,128, 0.9);">
     <figure class="container image">
         <img style="width: 95%; margin: 0 auto;" src="img/contact.jpg">
     </figure>
@@ -63,13 +63,13 @@ include("navbar.php");
                 </ul>
                 <ul class="is-unstyled has-text-centered" style="padding-top: 2%">
                     <li class="is-inlined">
-                        <a class="button is-info" href="http://facebook.com" style="color:inherit;">
+                        <a class="button is-success" href="http://facebook.com" style="color:inherit;">
                             <i class="fab fa-facebook-square"></i>
                             <span> &nbsp; Facebook</span>
                         </a>
                     </li>
                     <li class="is-inlined">
-                        <a class="button is-info" href="http://instagram.com" style="color:inherit">
+                        <a class="button is-success" href="http://instagram.com" style="color:inherit">
                             <i class="fab fa-instagram"></i>
                             <span> &nbsp; Instagram</span>
                         </a>
@@ -106,7 +106,7 @@ include("navbar.php");
 
             <div class="field is-grouped">
                 <div class="control">
-                    <button class="button is-link">Senden</button>
+                    <button class="button is-success">Senden</button>
                 </div>
             </div>
         </div>

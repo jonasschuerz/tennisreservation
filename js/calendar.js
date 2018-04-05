@@ -20,8 +20,8 @@ $(function () {
                     $.growl.error({message: "Reservierungen konnten nicht geladen werden", size: "large", duration: 4500});
                 },
                 editable: true,
-                color: 'grey',
-                textColor: 'white'
+                color: 'white',
+                textColor: 'grey'
         },
         views:
             {

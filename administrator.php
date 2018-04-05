@@ -43,57 +43,87 @@ if (isset($errorMessage)) {
 }
 include("navbar.php");
 ?>
-<div class="container" style="background-color: rgba(77,77,77, 0.1);">
 
-    <div class="columns" style="width: 95%; margin: 0 auto">
-        <div class="column">
-            <span>Spieler hinzufügen</span>
+<div class="container" style="background-color: rgba(128,128,128, 0.9);">
+    <div class="columns">
+        <div class="column is-3">
+            <aside class="menu" style="background: rgba(255,255,255, 0.9); color: white!important;">
+                <p class="menu-label">
+                    General
+                </p>
+                <ul class="menu-list">
+                    <li><a>Spieler</a></li>
+                    <li><a>Personalisierung</a></li>
+                </ul>
+                <p class="menu-label">
+                    Administration
+                </p>
+                <ul class="menu-list">
+                    <li><a>Team Settings</a></li>
+                    <li>
+                        <a class="is-active">Manage Your Team</a>
+                        <ul>
+                            <li><a>Members</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Invitations</a></li>
+                </ul>
+            </aside>
         </div>
         <div class="column">
-            <div class="field">
-                <div class="control">
-                    <div class="file has-name">
-                        <label class="file-label">
-                            <input class="file-input" type="file" name="resume">
-                            <span class="file-cta">
+            <div class="columns" style="width: 95%;">
+                <div class="column">
+                    <h1 class="title" style="color: white">Spieler hinzufügen</h1>
+                </div>
+                <div class="column">
+                    <div class="field">
+                        <div class="control">
+                            <div class="file has-name">
+                                <label class="file-label">
+                                    <input class="file-input" type="file" name="resume">
+                                    <span class="file-cta">
                             <span class="file-icon">
                                 <i class="fas fa-upload"></i>
                             </span>
                             <span class="file-label">Datei auswählen</span>
                         </span>
-                            <span class="file-name">
+                                    <span class="file-name">
                           Hier würde der Dateiname stehen
                         </span>
-                        </label>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="field">
-                <div class="control">
-                    <input class="input" type="text" placeholder="Vorname Nachnahme">
-                </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <input class="input" type="email" placeholder="Email">
-                </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <a class="button is-success">hinzufügen</a>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Vorname Nachnahme">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <a class="button is-success">hinzufügen</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
     <div class="is-divider" style="width: 90%; margin: 0 auto;"></div>
     <div class="section">
         <div class="columns">
             <div class="column">
-                <span>Spieler hinzufügen</span>
+                <h1 class="title" style="color: white">next Option</h1>
             </div>
             <div class="column">
-                <span>File upload: </span>
+                <h1 class="title" style="color: white"></h1>
             </div>
         </div>
     </div>

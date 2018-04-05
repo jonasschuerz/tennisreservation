@@ -14,3 +14,16 @@ li.is-inlined {
 figure img {
     border: solid whitesmoke;
 }
+
+.fc-day-number{
+    color: white;
+}
+.fc-more{
+    color: white;
+}
+.fc-left{
+    color: white;
+}
+.fc-today{
+    background: lightgray !important;
+}
