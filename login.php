@@ -31,13 +31,6 @@
     <link href="fullCalendar/fullcalendar.css" rel="stylesheet" type="text/css">
     <!-- MyScript -->
     <script src="js/Script.js"></script>
-    <!-- Particle/ Animation -->
-    <script src="particles/particles.js"></script>
-    <script>
-        particlesJS.load('particles-js', 'particles/particlesjs-config.json', function () {
-            console.log('callback - particles.js config loaded');
-        });
-    </script>
 </head>
 <body>
 <div id="particles-js" style="position: absolute; width: 100%; height: 100%;"></div>
@@ -48,7 +41,7 @@ if (isset($errorMessage)) {
 ?>
 <div class="section">
     <div class="container"
-         style="width: 100%; max-width: 400px; padding: 25px; border-radius: 25px; background-color: black;">
+         style="width: 100%; max-width: 400px; padding: 25px; border-radius: 25px; background: rgba(0,0,0, 0.8);">
         <div class="field" style="padding-bottom: 5%; width:100%;">
             <figure class="image is-128x128" style="margin: auto;">
                 <img class="img" style="text-align: center;" src="img/loginpic.png"/>
@@ -72,7 +65,7 @@ if (isset($errorMessage)) {
         </div>
         <div class="block">
             <p class="control">
-                <button id="login" class="button is-success" type="submit">
+                <button id="login" class="button is-success is-right" type="submit">
                     <i class="fas fa-sign-in-alt"></i>
                     &nbsp;
                     Login

@@ -22,6 +22,10 @@
     <!-- for the Time -->
     <link rel="stylesheet" href="clockpicker/jquery-clockpicker.min.css">
     <script src="clockpicker/jquery-clockpicker.min.js"></script>
+    <!-- Air Datepicker -->
+    <link href="air-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <script src="air-datepicker/js/datepicker.min.js"></script>
+    <script src="air-datepicker/js/i18n/datepicker.de.js"></script>
     <!-- Notifications -->
     <script src="growl/jquery.growl.js" type="text/javascript"></script>
     <link href="growl/jquery.growl.css" rel="stylesheet" type="text/css"/>
@@ -35,7 +39,7 @@
     <!-- MyStyle Options -->
     <link rel="stylesheet" href="./css/myCss.css"/>
 </head>
-<body onload="addOptionsPlace()" >
+<body onload="addOptionsPlace()">
 <?php
 if (isset($errorMessage)) {
     echo $errorMessage;
@@ -109,14 +113,55 @@ include("navbar.php");
         </ul>
     </div>
     <div class="animated zoomIn" style="padding: 0.05em 2% 2% 2%; height: 100%">
-        <div id="calendarReservation" ></div>
+        <div id="calendarReservation"></div>
         <div class="" style="padding:  0.75em 0.75em 0.75em 0.75em"> <!--Button-->
-            <button id="saveChange" onclick="updateData()" class="button is-white " style=""><i class="far fa-save"></i> &nbsp
+            <button id="saveChange" onclick="updateData()" class="button is-white " style=""><i class="far fa-save"></i>
+                &nbsp
                 Änderungen speichern
             </button>
         </div>
     </div>
+    <div class="modal" id="popup" style="width: 100%;">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <section class="modal-card-body">
+                <div class="columns" style="height:100%;">
+                    <div class="column" style="">
+                        <div class="datepicker-here" data-language='de'></div>
+                    </div>
+                    <div class="column">
+                        <table class="table" style="width: 100%; margin-bottom: 10px">
+                            <thead><tr><th>Start</th></tr></thead>
+                            <tbody><tr><td><div class="only-time"/></td></tr></tbody>
+                            <thead><tr><th>Ende</th></tr></thead>
+                            <tbody><tr><td><div class="only-time"/></td></tr></tbody>
+                            <thead><tr><th> Plätze</th></tr></thead>
+                        </table>
+                        <div class="select" style="width: 100%">
+                            <select style="width: 100%">
+                                <option value="Argentina">Argentina</option>
+                                <option value="Bolivia">Bolivia</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="Chile">Chile</option>
+                                <option value="Colombia">Colombia</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Save changes</button>
+                <button class="button">Cancel</button>
+            </footer>
+        </div>
+    </div>
 </div>
-
 </body>
+<script lang="javascript">
+    $('.only-time').datepicker({
+        dateFormat: ' ',
+        timepicker: true,
+        classes: 'only-timepicker'
+    });
+</script>
 </html>

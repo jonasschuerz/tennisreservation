@@ -36,7 +36,8 @@ function addOptionsPlace() {
     })
 }
 
-//Communication with the backend
+
+//Login Logout
 $(function () {
     var $email = $('#email');
     var $password = $('#password');

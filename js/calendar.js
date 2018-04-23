@@ -34,7 +34,7 @@ $(function () {
         },
         eventClick: function (event, jsEvent, view) {
             console.log(event.id);
-            window.alert("<?php echo base_url() ?>common/calendar/form_calendar");
+            $("#popup").addClass("is-active");
         },
         windowResize: function() {
             var ww = $(window).width();

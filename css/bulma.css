@@ -149,6 +149,7 @@ pre {
 }
 
 body {
+  zoom: 110%;
   background: url("backgorund.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;

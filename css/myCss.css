@@ -27,3 +27,10 @@ figure img {
 .fc-today{
     background: lightgray !important;
 }
+.only-timepicker .datepicker--nav,
+.only-timepicker .datepicker--content {
+    display: none;
+}
+.only-timepicker .datepicker--time {
+    border-top: none;
+}
