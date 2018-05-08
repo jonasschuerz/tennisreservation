@@ -34,3 +34,7 @@ figure img {
 .only-timepicker .datepicker--time {
     border-top: none;
 }
+
+.datepicker{
+    width:100%;
+}

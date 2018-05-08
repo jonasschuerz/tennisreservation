@@ -25,7 +25,7 @@ function addOptionsPlace() {
             value = JSON.parse(value);
             $.each(value, function (i, item) {
                 console.log(i);
-                $('#place').append($('<option>', {
+                $('.place').append($('<option>', {
                     text: item['name'],
                     class: 'dropdown-item'
                 }));
@@ -46,6 +46,7 @@ $(function () {
             email: $email.val(),
             password: $password.val(),
         }
+        $('#login').addClass("is-loading");
         $.ajax({
             type: "Post",
             url: "./Back-End/handlelogin.php",

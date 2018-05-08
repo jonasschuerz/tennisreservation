@@ -19,13 +19,14 @@
     <!-- for the Date -->
     <link rel="stylesheet" href="calendar-pignose/css/pignose.calendar.min.css"/>
     <script src="calendar-pignose/js/pignose.calendar.min.js"></script>
-    <!-- for the Time -->
-    <link rel="stylesheet" href="clockpicker/jquery-clockpicker.min.css">
-    <script src="clockpicker/jquery-clockpicker.min.js"></script>
+
     <!-- Air Datepicker -->
     <link href="air-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css">
     <script src="air-datepicker/js/datepicker.min.js"></script>
     <script src="air-datepicker/js/i18n/datepicker.de.js"></script>
+    <!-- for the Time -->
+    <link rel="stylesheet" href="clockpicker/jquery-clockpicker.min.css">
+    <script src="clockpicker/jquery-clockpicker.min.js"></script>
     <!-- Notifications -->
     <script src="growl/jquery.growl.js" type="text/javascript"></script>
     <link href="growl/jquery.growl.css" rel="stylesheet" type="text/css"/>
@@ -93,9 +94,8 @@ include("navbar.php");
             </script>
 
             <div class="column"> <!--Places-->
-
                 <div class="select">
-                    <select id="place" name="place"> </select>
+                    <select class="place" id="place"> </select>
                 </div>
 
             </div>
@@ -126,32 +126,32 @@ include("navbar.php");
         <div class="modal-card">
             <section class="modal-card-body">
                 <div class="columns" style="height:100%;">
-                    <div class="column" style="">
-                        <div class="datepicker-here" data-language='de'></div>
+                    <div class="column" style="display: flex; align-items: center;">
+                        <div id="datePopup" class="datepicker-here"  inline="true" data-language='de'></div>
                     </div>
                     <div class="column">
                         <table class="table" style="width: 100%; margin-bottom: 10px">
                             <thead><tr><th>Start</th></tr></thead>
-                            <tbody><tr><td><div class="only-time"/></td></tr></tbody>
+                            <tbody><tr><td><div id="startPopup" class="only-time"/></td></tr></tbody>
                             <thead><tr><th>Ende</th></tr></thead>
-                            <tbody><tr><td><div class="only-time"/></td></tr></tbody>
-                            <thead><tr><th> Plätze</th></tr></thead>
+                            <tbody><tr><td><div id="endPopup" class="only-time"/></td></tr></tbody>
+                            <thead><tr><th>Platz</th></tr></thead>
+                            <tbody><tr>
+                                <td> <div class="select" id="placePopup" style="width: 100%">
+                                        <select class="place" style="width: 100%">
+                                        </select>
+                                    </div>
+                                </td><td></td></tr>
+                            </tbody>
                         </table>
-                        <div class="select" style="width: 100%">
-                            <select style="width: 100%">
-                                <option value="Argentina">Argentina</option>
-                                <option value="Bolivia">Bolivia</option>
-                                <option value="Brazil">Brazil</option>
-                                <option value="Chile">Chile</option>
-                                <option value="Colombia">Colombia</option>
-                            </select>
-                        </div>
+
                     </div>
                 </div>
             </section>
             <footer class="modal-card-foot">
-                <button class="button is-success">Save changes</button>
-                <button class="button">Cancel</button>
+                <button id="savePopup" class="button is-success">Save changes</button>
+                <button id="cancelPopup" class="button">Cancel</button>
+                <button id="deletePopup" class="button is-danger">Löschen</button>
             </footer>
         </div>
     </div>
