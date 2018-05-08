@@ -11,6 +11,7 @@
     $res = $db->query("Select player_id, email, password FROM player WHERE email = '$email' and password = '$pwd'");
     $res = $db->to_array($res);
     if(!empty($res)){
+
         AccountSession::login($email, $res[0]->player_id);
         echo json_encode(array("error"=>false, "description"=>"Login erfolgreich"));
         die();

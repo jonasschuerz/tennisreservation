@@ -10,9 +10,9 @@ class Database {
 
     private $connection = false;
 
-    private static $database = null;
+    private static $instance = null;
 
-    private function Database() {
+    private function __construct() {
         if($this->connection === false)
             $this->connection = mysqli_connect($this->hostname, $this->username, $this->password, $this->db_name);
     }
@@ -29,9 +29,9 @@ class Database {
     }
 
     public static function get_instance() {
-        if (Database::$database === null)
-            Database::$database = new Database();
-        return Database::$database;
+        if (Database::$instance === null)
+            Database::$instance = new Database();
+        return Database::$instance;
     }
 
     public function query($sql_query) {
@@ -47,7 +47,7 @@ class Database {
     public function close() {
         if($this->connection !== false)
             mysqli_close($this->connection);
-        Database::$database = null;
+        Database::$instance = null;
     }
 
     public function error() {
