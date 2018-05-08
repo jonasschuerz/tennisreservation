@@ -69,3 +69,4 @@ INSERT INTO player(firstname, lastname, email, password, init_Date, club_id) VAL
 INSERT INTO player(firstname, lastname, email, password, init_Date, club_id) VALUES('Gerhard', 'Mustermann', 'gerhard.mustermann@asdf.de', '098f6bcd4621d373cade4e832627b4f6', now(), 1);
 INSERT INTO player(firstname, lastname, email, password, init_Date, club_id) VALUES('Herbert', 'Mustermann', 'herbert.mustermann@asdf.de', '098f6bcd4621d373cade4e832627b4f6', now(), 1);
 INSERT INTO player(firstname, lastname, email, password, init_Date, club_id) VALUES('Luis', 'Mustermann', 'luis.mustermann@asdf.de', '098f6bcd4621d373cade4e832627b4f6', now(), 1);
+Insert INTO place (name, place_id) VALUES('Platz 1', 1);
