@@ -47,86 +47,113 @@ include("navbar.php");
 <div class="container" style="background-color: rgba(128,128,128, 0.9);">
     <div class="columns">
         <div class="column is-3">
-            <aside class="menu" style="background: rgba(255,255,255, 0.9); color: white!important;">
-                <p class="menu-label">
-                    General
+            <aside class="menu" style="background: hsl(141, 71%, 48%); color: white!important;">
+                <p class="menu-label"style="background: hsl(0, 0%, 100%); color: hsl(0, 0%, 4%);">
+                    Spieler Verwaltung
                 </p>
                 <ul class="menu-list">
-                    <li><a>Spieler</a></li>
-                    <li><a>Personalisierung</a></li>
+                    <li><a href="#spieHinz">Spieler hinzufügen</a</li>
+                    <li><a>Spieler löschen</a></li>
+                    <li><a>Spieler updaten</a></li>
                 </ul>
-                <p class="menu-label">
-                    Administration
+                <p class="menu-label" style="background: hsl(0, 0%, 100%); color: hsl(0, 0%, 4%);">
+                    Plätze Verwaltung
                 </p>
                 <ul class="menu-list">
-                    <li><a>Team Settings</a></li>
-                    <li>
-                        <a class="is-active">Manage Your Team</a>
-                        <ul>
-                            <li><a>Members</a></li>
-                        </ul>
-                    </li>
-                    <li><a>Invitations</a></li>
+                    <li><a>Plätze hinzufügen</a</li>
+                    <li><a>Plätze löschen</a></li>
                 </ul>
+
             </aside>
+
         </div>
         <div class="column">
             <div class="columns" style="width: 95%;">
-                <div class="column">
-                    <h1 class="title" style="color: white">Spieler hinzufügen</h1>
-                </div>
-                <div class="column">
-                    <div class="field">
-                        <div class="control">
-                            <div class="file has-name">
-                                <label class="file-label">
-                                    <input class="file-input" type="file" name="resume">
-                                    <span class="file-cta">
-                            <span class="file-icon">
-                                <i class="fas fa-upload"></i>
-                            </span>
-                            <span class="file-label">Datei auswählen</span>
-                        </span>
-                                    <span class="file-name">
-                          Hier würde der Dateiname stehen
-                        </span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Vorname Nachnahme">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="email" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <a class="button is-success">hinzufügen</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-
-
     <div class="is-divider" style="width: 90%; margin: 0 auto;"></div>
-    <div class="section">
+    <div class="section" id="spieHinz">
         <div class="columns">
-            <div class="column">
-                <h1 class="title" style="color: white">next Option</h1>
-            </div>
-            <div class="column">
-                <h1 class="title" style="color: white"></h1>
-            </div>
+          <h1>Spieler hinzufügen</h1>
+          <div class="column">
+              <div class="field">
+                  <div class="control">
+                      <div class="file has-name">
+                          <label class="file-label">
+                              <input class="file-input" type="file" name="resume">
+                              <span class="file-cta">
+                      <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                      </span>
+                      <span class="file-label">Datei auswählen</span>
+                  </span>
+                              <span class="file-name">
+                    Hier würde der Dateiname stehen
+                  </span>
+                          </label>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="field">
+                  <div class="control">
+                      <input class="input" type="text" placeholder="Vorname Nachnahme">
+                  </div>
+              </div>
+              <div class="field">
+                  <div class="control">
+                      <input class="input" type="email" placeholder="Email">
+                  </div>
+              </div>
+              <div class="field">
+                  <div class="control">
+                      <a class="button is-success">hinzufügen</a>
+                  </div>
+              </div>
+          </div>
         </div>
     </div>
+    <div class="is-divider" style="width: 90%; margin: 0 auto;"></div>
+    <div id="headin2"><strong> <h3>Admin page </h3></strong></div>
+    <?php
+        $user = 'root';
+        $password = '';
+        $db = 'syp';
+        $host = 'localhost';
+
+        $link = mysqli_init();
+        $success = mysqli_real_connect(
+           $link,
+           $host,
+           $user,
+           $password,
+           $db
+        );
+    ?>
+    <?php
+        echo "<table width=\"100%\" border=\"0\" id=\"tab\">";
+        echo "<tr>";
+        echo "<th id=\"td1\">Spieler Nummer</th><th id=\"td2\">Vorname</th>
+                  <th id=\"td3\">Nachname</th><th id=\"td4\">Email</th>";
+        echo "</tr>";
+
+        $result = mysql_query("SELECT player_id, firstname,lastname,email FROM player");
+        while ( $row = mysql_fetch_array($result))
+        {
+            $SN = $row['player_id'];
+            $actitle = $row['firstname'];
+            $email = $row['lastname'];
+            $gender  = $row['email'];
+
+            echo "<tr>";
+            echo "<td>".$SN."</td><td>".$actitle."</td><td>".$email."</td>
+                      <td>".$gender."</td>
+                      <td>"."<input type=\"button\" name=\"edit\" value=\"Edit\"/>
+                      <input type=\"button\" value=\"Delete\" name=\"delete\" >"."</td>";
+            echo "</tr>";
+        }
+    ?>
 </div>
 
 </body>
